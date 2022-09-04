@@ -1,0 +1,44 @@
+#Environmental artifacts
+/.project
+/.DS_Store
+*.DS_Store
+/includes/tmp/*
+/.externalToolBuilders
+/.sass-cache/*
+/.sass-cache
+/bower_components/*
+/bower_components
+/node_modules
+yarn.lock
+/scaffold
+/logs/*
+/*.log
+/*.sublime*
+/.vscode
+*hbm.xml
+*.hbmxml
+build/workbench/build.number
+build/workbench/deploy/*
+.settings/org.eclipse.core.resources.prefs
+settings.xml
+.cflintrc
+/.engine
+/.engines
+
+#runtime configuration files
+/.env
+/.*.env
+
+#Log Directories
+**/logs
+*.log
+
+#temporary files
+ehcache-config*
+**/ehcache-config*
+
+# Commandbox-installed dependencies
+modules
+coldbox
+testbox
+

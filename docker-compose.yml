@@ -1,0 +1,33 @@
+version: '1.0'
+
+services:
+
+  mysql:
+    image: mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "3357:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "T0pS3cr3t1234!"
+      MYSQL_PASSWORD: "T0pS3cr3t1234!"
+      MYSQL_USER: sa
+    volumes:
+      - mysql8-data:/var/lib/mysql
+
+  app:
+    image: ortussolutions/commandbox:lucee5
+    depends_on:
+      - mysql
+    environment:
+      cfconfig_adminPassword: T0pS3cr3t1234!
+      HEALTHCHECK_URI: http://127.0.0.1:8080/config/index.cfm
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USERNAME: sa
+      DB_PASSWORD: "T0pS3cr3t1234!"
+      DB_DATABASE: headlesscb
+      ENVIRONMENT: development
+    ports:
+      - "61670:8080"
+    volumes:
+      - .:/app:delegated
