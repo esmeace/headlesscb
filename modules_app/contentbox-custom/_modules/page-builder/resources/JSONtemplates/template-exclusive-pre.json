@@ -1,0 +1,170 @@
+{
+    "meta": {
+        "model": {
+            "leadInfo": {
+                "content": {
+                    "travelType": "",
+                    "name": "",
+                    "customerListID": "",
+                    "leadSourceName": "",
+                    "leadSourceID": ""
+                }
+            },
+            "promoSelector": {
+                "content": {
+                    "promoID": ""
+                }
+            },
+            "vendorInfo": {
+                "content": {
+                    "travelType": "",
+                    "vendorName": "",
+                    "vendorCode": ""
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "leadInfo",
+                    "label": "Lead Info",
+                    "model": "leadInfo"
+                },
+                {
+                    "type": "promoSelector",
+                    "label": "Select a Promo ID",
+                    "model": "promoSelector"
+                },
+                {
+                    "type": "vendorSelector",
+                    "label": "Vendor Selector",
+                    "model": "vendorInfo"
+                }
+            ]
+        }
+    },
+    "pageContent": {
+        "model": {
+            "heroWithCta": {
+                "content": {
+                    "title": "Gavin learns to code",
+                    "subtitle": "Okay, slight exaggeration",
+                    "url": "https://previews.123rf.com/images/rixie/rixie1109/rixie110900122/10631638-a-seamless-background-of-sliced-kiwi-fruit-eps10-vector-format-.jpg",
+                    "mobileUrl": "https://previews.123rf.com/images/rixie/rixie1109/rixie110900122/10631638-a-seamless-background-of-sliced-kiwi-fruit-eps10-vector-format-.jpg",
+                    "alignment": "left",
+                    "cta": {
+                        "visible": true,
+                        "type": "filled",
+                        "color": "orange"
+                    }
+                },
+                "config": {
+                    "linkColors": [
+                        "red",
+                        "yellow"
+                    ],
+                    "alignments": [
+                        "left",
+                        "center",
+                        "right"
+                    ],
+                    "ctaTypes": [
+                        "hollow",
+                        "filled"
+                    ],
+                    "ctaColors": [
+                        "orange",
+                        "blue"
+                    ]
+                }
+            },
+            "contentBlock02": {
+                "content": {
+                    "ctaTimerFormBlock": {
+                        "title": "Booking Open In",
+                        "deadline": "2019-08-22 00:00:00",
+                        "header": "Follow Us To A Better Vacation.",
+                        "paragraph": "Get the best price on your vacation by filling out this form or call us now at 1-888-447-8459.",
+                        "cta": {
+                            "text": "RSVP Now",
+                            "type": "filled",
+                            "color": "orange"
+                        }
+                    },
+                    "titleParagraphBlock": {
+                        "title": "Explore Extraordinary Destinations.",
+                        "paragraph": "Make a splash this Summer by booking your dream getaway during our Celebrity Cruise Summer Savings Event featuring the biggest bonuses of the season! Discover somewhere new or revisit a favorite destination onboard a Celebrity cruise and prepare for an escape filled with world-class cuisine, leading-edge entertainment, modern accommodations, and so much more. Don't delay, this offer is first come, first served and the best cabins are expected to fill up quickly!"
+                    },
+                    "formAlignment": "right"
+                },
+                "config": {
+                    "ctaTimerFormBlock": {
+                        "cta": {
+                            "types": [
+                                "hollow",
+                                "filled"
+                            ],
+                            "colors": [
+                                "orange",
+                                "blue"
+                            ]
+                        }
+                    },
+                    "formAlignments": [
+                        "left",
+                        "right"
+                    ]
+                }
+            },
+            "searchResults": {
+                "content": {
+                    "maxrows": 25,
+                    "offset": "",
+                    "sortOrder": "sailDate ASC",
+                    "page": 1,
+                    "esquery": "",
+                    "search": "",
+                    "dateList": "",
+                    "startDate": "",
+                    "endDate": "",
+                    "returnBy": "",
+                    "shipList": "",
+                    "promotionList": "",
+                    "rivers": "",
+                    "destList": "",
+                    "supplierList": "",
+                    "specialPricing": "",
+                    "residentOf": "",
+                    "largeMapHTML": "",
+                    "returnOptions": "",
+                    "embarkingPortCodes": "",
+                    "cabinTypes": "",
+                    "lengthList": "7-9,10-14,15-999"
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "heroWithCta",
+                    "label": "Hero with CTA",
+                    "model": "heroWithCta",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "contentBlock02",
+                    "label": "Content Block 02",
+                    "model": "contentBlock02",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "searchResult",
+                    "label": "Search Results",
+                    "model": "searchResults"
+                }
+            ]
+        }
+    }
+}

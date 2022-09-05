@@ -1,0 +1,229 @@
+{
+    "meta": {
+        "model": {
+            "title": "Stress-Free Vacation Planning | Avoya Travel",
+            "description": "Description",
+            "slug": "home-page"
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Title",
+                    "model": "title"
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Description",
+                    "model": "description"
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Slug",
+                    "model": "slug"
+                }
+            ]
+        }
+    },
+    "pageContent": {
+        "model": {
+            "h1": "Stress-Free Vacation Planning",
+            "cruiseSearchImage": {
+                "content": {
+                    "url": "https://res.cloudinary.com/avoya-travel/image/upload/v1565377686/layout/underwater-bg.jpg",
+                    "mobileUrl": "https://res.cloudinary.com/avoya-travel/image/upload/v1565377686/layout/underwater-bg.jpg"
+                }
+            },
+            "riverCruiseSearchImage": {
+                "content": {
+                    "url": "https://res.cloudinary.com/avoya-travel/image/upload/v1565377686/layout/underwater-bg.jpg",
+                    "mobileUrl": "https://res.cloudinary.com/avoya-travel/image/upload/v1565377686/layout/underwater-bg.jpg"
+                }
+            },
+            "tourSearchImage": {
+                "content": {
+                    "url": "https://res.cloudinary.com/avoya-travel/image/upload/v1565377686/layout/underwater-bg.jpg",
+                    "mobileUrl": "https://res.cloudinary.com/avoya-travel/image/upload/v1565377686/layout/underwater-bg.jpg"
+                }
+            },
+            "cruiseLinks": {
+                "content": {
+                    "label": "Cruise Links",
+                    "ol": [
+                        {
+                            "name": "Caribbean Cruises from",
+                            "link": "https://www.avoyatravel.com/cruises/search/?destList=Caribbean&lengthList=3-6&endDate=09%2F30%2F2019&supplierList=CV,CB,CS,HA,NC,OE,PC,RE,RC,SIL,WSC&sortOrder=LowestPrice%20ASC"
+                        },
+                        {
+                            "name": "Europe Cruises from",
+                            "link": "https://www.avoyatravel.com/cruises/search/?destList=Europe&lengthList=3-6&endDate=10%2F31%2F2019&supplierList=AM,AV,CB,CS,HA,NC,OE,PC,RE,RC,SIL,UW,WSC&sortOrder=LowestPrice%20ASC"
+                        },
+                        {
+                            "name": "Alaska Cruises from" ,
+                            "link": "https://www.avoyatravel.com/cruises/search/?destList=Alaska&lengthList=7-9&endDate=09%2F30%2F2019&startDate=05%2F01%2F2019&supplierList=CB,CS,HA,NC,OE,PC,RE,RC,SIL&sortOrder=LowestPrice%20ASC"
+                        },
+                        {
+                            "name": "Last Minute Cruises" ,
+                            "link": "https://www.avoyatravel.com/cruises/last-minute-cruises/"
+                        }
+                    ]
+                }
+            },
+            "riverCruiseLinks": {
+                "content": {
+                    "label": "River Cruise Links",
+                    "ol": [
+                        {
+                            "name": "Caribbean Cruises from",
+                            "link": "https://www.avoyatravel.com/cruises/search/?destList=Caribbean&lengthList=3-6&endDate=09%2F30%2F2019&supplierList=CV,CB,CS,HA,NC,OE,PC,RE,RC,SIL,WSC&sortOrder=LowestPrice%20ASC"
+                        },
+                        {
+                            "name": "Europe Cruises from",
+                            "link": "https://www.avoyatravel.com/cruises/search/?destList=Europe&lengthList=3-6&endDate=10%2F31%2F2019&supplierList=AM,AV,CB,CS,HA,NC,OE,PC,RE,RC,SIL,UW,WSC&sortOrder=LowestPrice%20ASC"
+                        },
+                        {
+                            "name": "Alaska Cruises from" ,
+                            "link": "https://www.avoyatravel.com/cruises/search/?destList=Alaska&lengthList=7-9&endDate=09%2F30%2F2019&startDate=05%2F01%2F2019&supplierList=CB,CS,HA,NC,OE,PC,RE,RC,SIL&sortOrder=LowestPrice%20ASC"
+                        },
+                        {
+                            "name": "Last Minute Cruises" ,
+                            "link": "https://www.avoyatravel.com/cruises/last-minute-cruises/"
+                        }
+                    ]
+                }
+            },
+            "tourLinks": {
+                "content": {
+                    "label": "Tour Links",
+                    "ol": [
+                        {
+                            "name": "Caribbean Cruises from",
+                            "link": "https://www.avoyatravel.com/cruises/search/?destList=Caribbean&lengthList=3-6&endDate=09%2F30%2F2019&supplierList=CV,CB,CS,HA,NC,OE,PC,RE,RC,SIL,WSC&sortOrder=LowestPrice%20ASC"
+                        },
+                        {
+                            "name": "Europe Cruises from",
+                            "link": "https://www.avoyatravel.com/cruises/search/?destList=Europe&lengthList=3-6&endDate=10%2F31%2F2019&supplierList=AM,AV,CB,CS,HA,NC,OE,PC,RE,RC,SIL,UW,WSC&sortOrder=LowestPrice%20ASC"
+                        },
+                        {
+                            "name": "Alaska Cruises from" ,
+                            "link": "https://www.avoyatravel.com/cruises/search/?destList=Alaska&lengthList=7-9&endDate=09%2F30%2F2019&startDate=05%2F01%2F2019&supplierList=CB,CS,HA,NC,OE,PC,RE,RC,SIL&sortOrder=LowestPrice%20ASC"
+                        },
+                        {
+                            "name": "Last Minute Cruises" ,
+                            "link": "https://www.avoyatravel.com/cruises/last-minute-cruises/"
+                        }
+                    ]
+                }
+            },
+            "cardsImgTitleParagraph": {
+                "card1": {
+                    "content": {
+                        "imgURL": "https://res.cloudinary.com/avoya-travel/image/upload/c_scale/v1557250833/layout/icons/deals_02.png",
+                        "title": "Exclusive Partnerships & Travel Deals",
+                        "paragraph": "Receive the very best value for your next vacation with exclusive deals, discounts, and prices that we’ve secured with top travel companies."
+                    }
+                },
+                "card2": {
+                    "content": {
+                        "imgURL": "https://res.cloudinary.com/avoya-travel/image/upload/c_scale/v1556920186/layout/icons/tours_02.png",
+                        "title": "Stress-Free Vacation Planning",
+                        "paragraph": "Receive the very best value for your next vacation with exclusive deals, discounts, and prices that we’ve secured with top travel companies."
+                    }
+                },
+                "card3": {
+                    "content": {
+                        "imgURL": "https://res.cloudinary.com/avoya-travel/image/upload/c_scale/v1557250789/layout/icons/deals_01.png",
+                        "title": "Lowest Price Guaranteed",
+                        "paragraph": "Receive the very best value for your next vacation with exclusive deals, discounts, and prices that we’ve secured with top travel companies."
+                    }
+                }
+            },
+            "testimonials": {
+                "content": {
+                    "label": "testimonials",
+                    "ol": [
+                        {
+                            "paragraph": "This is my second time cruising with Avoya Travel’s help, and I am extremely satisfied with the price and everything else. Both trips went smooth and nice with no hassles, so I would definitely recommend vacationing with that company.",
+                            "name": "Vesela Valnarov"
+                        },
+                        {
+                            "paragraph": "Had a wonderful time. Everything Avoya promised was right on the money. Love every minute of it!",
+                            "name": "Patricia Howle"
+                        },
+                        {
+                            "paragraph": "Avoya Travel always finds a very low price for a cruise." ,
+                            "name": "Ignacio David"
+                        }
+                    ]
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Page Header",
+                    "model": "h1"
+                },       
+                {
+                    "type": "fullWidthImage",
+                    "label": "Cruise Search Image",
+                    "model": "cruiseSearchImage",
+                    "featured": false,
+                    "disabled": false
+                },      
+                {
+                    "type": "fullWidthImage",
+                    "label": "River Cruise Search Image",
+                    "model": "riverCruiseSearchImage",
+                    "featured": false,
+                    "disabled": false
+                },      
+                {
+                    "type": "fullWidthImage",
+                    "label": "Tour Search Image",
+                    "model": "tourSearchImage",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "linkList",
+                    "label": "Cruise Links",
+                    "model": "cruiseLinks",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "linkList",
+                    "label": "River Cruise Links",
+                    "model": "riverCruiseLinks",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "linkList",
+                    "label": "Tour Links",
+                    "model": "tourLinks",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "label": "Intro Pillars",
+                    "type": "cardsImgTitleParagraph",
+                    "model": "cardsImgTitleParagraph"
+                },
+                {
+                    "type": "quoteAndSiteList",
+                    "label": "Customer Testimonials",
+                    "model": "testimonials",
+                    "featured": false,
+                    "disabled": false
+                }
+            ]
+        }
+    }
+}

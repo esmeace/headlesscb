@@ -1,0 +1,178 @@
+{
+    "meta": {
+        "model": {
+            "leadInfo": {
+                "content": {
+                    "travelType": "",
+                    "name": "Exclusive Princess Cruise Flash Sale - January 2019",
+                    "customerListID": "740",
+                    "leadSourceName": "Automated Web Request - Mktg Event Princess",
+                    "leadSourceID": "308"
+                }
+            },
+            "promoSelector": {
+                "content": {
+                    "promoID": "15134"
+                }
+            },
+            "vendorInfo": {
+                "content": {
+                    "travelType": "Cruise",
+                    "vendorName": "Princess Cruises",
+                    "vendorCode": "PC"
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "leadInfo",
+                    "label": "Lead Info",
+                    "model": "leadInfo"
+                },
+                {
+                    "type": "promoSelector",
+                    "label": "Select a Promo ID",
+                    "model": "promoSelector"
+                },
+                {
+                    "type": "vendorSelector",
+                    "label": "Vendor Selector",
+                    "model": "vendorInfo"
+                }
+            ]
+        }
+    },
+    "pageContent": {
+        "model": {
+            "heroWithCta": {
+                "content": {
+                    "title": "Exclusive Princess Cruise Flash Sale",
+                    "subtitle": "Discover Your Passion For Travel",
+                    "url": "/__media/premium-campaigns/princess-cruises/1901_header.jpg",
+                    "mobileUrl": "/__media/premium-campaigns/princess-cruises/1901_header-mobile.jpg",
+                    "alignment": "center",
+                    "cta": {
+                        "visible": true,
+                        "type": "filled",
+                        "color": "orange"
+                    }
+                },
+                "config": {
+                    "linkColors": [
+                        "red",
+                        "yellow"
+                    ],
+                    "alignments": [
+                        "left",
+                        "center",
+                        "right"
+                    ],
+                    "ctaTypes": [
+                        "hollow",
+                        "filled"
+                    ],
+                    "ctaColors": [
+                        "orange",
+                        "blue"
+                    ]
+                }
+            },
+            "contentBlock03": {
+                "content": {
+                    "title": "Get Out and Explore",
+                    "p1": "Ready to make new and lasting memories? Join us during our Exclusive Princess Cruise Flash Sale and take advantage of unbeatable vacation bonuses only available from Avoya Travel. Enjoy decadent dining, comfortable accommodations, enriching destinations, and more as you fall in love with all that Princess Cruises has to offer. Don't delay, this is a first come, first served deal and the best cabins are expected to fill up quickly!",
+                    "subtitle": "Exclusive Bonuses Only from Avoya Travel.",
+                    "ol": [
+                        "Free Gratuities – Exclusive!",
+                        "Up to $985 Free Onboard Credit",
+                        "Up to 40% Savings",
+                        "Free Upgrades",
+                        "Free Specialty Dinner on Popular Itineraries",
+                        "Plus, More"
+                    ],
+                    "p2": "To receive the best savings and lowest land-only rates, you must book no later than January 31, 2019. Take advantage of this above and beyond offer on select sailings and categories by calling us at 1-888-447-8459 and we will connect you with an Independent Princess Cruises Vacation Planner who will help you plan the adventure of a lifetime.",
+                    "ol2title": "Choose one of these great perks:",
+                    "ol2": [
+                        "$300 Bonus Credit",
+                        "Free Beverage Package for Two",
+                        "Free Unlimited Internet",
+                        "or More!"
+                    ],
+                    "message": "Insider Tip: Book Select Sailings & Receive 3 or More Perks!"
+                },
+                "config": {}
+            },
+            "searchResults": {
+                "content": {
+                    "maxrows": 25,
+                    "offset": "",
+                    "sortOrder": "LowestPrice ASC",
+                    "page": 1,
+                    "esquery": "",
+                    "search": "",
+                    "dateList": "",
+                    "startDate": "",
+                    "endDate": "",
+                    "returnBy": "",
+                    "shipList": "",
+                    "promotionList": "",
+                    "rivers": "",
+                    "destList": "",
+                    "supplierList": "",
+                    "specialPricing": "",
+                    "residentOf": "",
+                    "largeMapHTML": "",
+                    "returnOptions": "",
+                    "embarkingPortCodes": "",
+                    "cabinTypes": "",
+                    "lengthList": "7-9,10-14,15-999"
+                }
+            },
+            "terms": {
+                "content": {
+                    "p1": "The following section is for Terms. Leave this textbox as is.",
+                    "subtitle": "Exclusive Bonuses Only from Avoya Travel.",
+                    "ol": [
+                        "Free Gratuities – Exclusive!",
+                        "Up to $985 Free Onboard Credit",
+                        "Up to 40% Savings",
+                        "Free Upgrades",
+                        "Free Specialty Dinner on Popular Itineraries",
+                        "Plus, More"
+                    ],
+                    "p2": "The above section is for Terms. Leave this textbox as is."
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "heroWithCta",
+                    "label": "Hero with CTA",
+                    "model": "heroWithCta",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "contentBlock03",
+                    "label": "Content Block 03",
+                    "model": "contentBlock03",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "searchResult",
+                    "label": "Search Results",
+                    "model": "searchResults"
+                },
+                {
+                    "type": "contentBlock01",
+                    "model": "terms",
+                    "featured": false,
+                    "disabled": false
+                }
+            ]
+        }
+    }
+}

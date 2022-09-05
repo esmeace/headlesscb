@@ -1,0 +1,297 @@
+{
+    "meta": {
+        "model": {
+            "leadInfo": {
+                "content": {
+                    "travelType": "",
+                    "name": "",
+                    "customerListID": "779",
+                    "leadSourceName": "",
+                    "leadSourceID": "319"
+                }
+            },
+            "promoSelector": {
+                "content": {
+                    "promoID": ""
+                }
+            },
+            "vendorInfo": {
+                "content": {
+                    "travelType": "Cruise",
+                    "vendorName": "",
+                    "vendorCode": ""
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "leadInfo",
+                    "label": "Lead Info",
+                    "model": "leadInfo"
+                },
+                {
+                    "type": "promoSelector",
+                    "label": "Select a Promo ID",
+                    "model": "promoSelector"
+                },
+                {
+                    "type": "vendorSelector",
+                    "label": "Vendor Selector",
+                    "model": "vendorInfo"
+                }
+            ]
+        }
+    },
+    "categories": [],
+    "pageContent": {
+        "model": {
+            "heroWithCta": {
+                "content": {
+                    "title": "BUY ONE VACATION, GET ONE FREE",
+                    "subtitle": "GET A FREE 4-NIGHT STAY WHEN BOOKING A 7+ NIGHT CRUISE WITH ANY AMEX CARD",
+                    "backgroundUrl": "https://previews.123rf.com/images/rixie/rixie1109/rixie110900122/10631638-a-seamless-background-of-sliced-kiwi-fruit-eps10-vector-format-.jpg",
+                    "mobileBackgroundUrl": "https://previews.123rf.com/images/rixie/rixie1109/rixie110900122/10631638-a-seamless-background-of-sliced-kiwi-fruit-eps10-vector-format-.jpg",
+                    "alignment": "center",
+                    "cta": {
+                        "visible": true,
+                        "type": "hollow",
+                        "url": ""
+                    }
+                },
+                "config": {
+                    "buttonOutlineColors": [
+                        "white",
+                        "yellow"
+                    ],
+                    "alignments": [
+                        "left",
+                        "center",
+                        "right"
+                    ],
+                    "ctaTypes": [
+                        "hollow",
+                        "filled"
+                    ]
+                }
+            },
+            "paragraphClean": {
+                "content": {
+                    "title": "Limited-Time Offer!",
+                    "paragraph": "Ready to make new and lasting memories? Join us during our Exclusive Princess Cruise Flash Sale and take advantage of unbeatable vacation bonuses only available from Avoya Travel. Enjoy decadent dining, comfortable accommodations, enriching destinations, and more as you fall in love with all that Princess Cruises has to offer. Don't delay, this is a first come, first served deal and the best cabins are expected to fill up quickly!"
+                }
+            },
+            "couponStyle": {
+                "title": "Limited-Time Offer!",
+                "content": {
+                    "ol": [
+                        "Get a Free 4-Night Resort Stay at select Mexico Resorts when you book ANY 7+ night cruise with your American Express card!",
+                        "Limited Time Offer: July 24th – December 31st"
+                    ],
+                    "alignment": "left",
+                    "cta": {
+                        "visible": true,
+                        "type": "filled",
+                        "color": "orange"
+                    },
+                    "title": "How To Get This Deal"
+                },
+                "config": {
+                    "linkColors": [
+                        "red",
+                        "yellow"
+                    ],
+                    "alignments": [
+                        "left",
+                        "center",
+                        "right"
+                    ],
+                    "ctaTypes": [
+                        "hollow",
+                        "filled"
+                    ],
+                    "ctaColors": [
+                        "orange",
+                        "blue"
+                    ]
+                }
+            },
+            "terms": "<strong>Book ANY 7+ Night sailing with Avoya Travel to take advantage of a Free 4-Night stay at select Mexico Resorts when you pay with your American Express Card!</strong><ul><li>Offer applicable to new bookings only and is combinable with select offers. Please contact an Avoya Travel Vacation Specialist to see what other offers may be combined with your desired sail date.</li><li>Free Resort Stay includes a 4-Night Resort Stay for up to 4 people at select Mexico properties, is one per booking, applies to select sailings only, is based on availability, is non-refundable, and non-transferable.</li><li>Resort taxes, fees, and refundable security deposit are additional and apply to all guests.</li><li>Free Resort Stay is valid for 12 months from time of booking the cruise portion of the vacation.</li><li>Offer is valid with all U.S. issued American Express cards.</li><li>American Express Cardmember must be traveling on both cruise and resort itineraries booked for offer to apply.</li><li>Deposit must be made with an American Express Card within the booking window for offer to apply.</li><li>Select pricing may include a minimum deposit amount, which is non-refundable; non-refundable deposits may include a change fee imposed by the cruise line.</li><li>Select pricing may not be combinable with this promotion.</li><li>Prices listed are in U.S. dollars and are cruise only, per person, based on double occupancy, and subject to availability at time of booking.</li><li>American Express reserves the right to change or withdraw this offer at any time without prior notice.</li><li>Additional restrictions may apply, please call an Avoya Travel Vacation Specialist for more information.</li><li>Hurry, this is a limited time offer!</li></ul>",
+            "fullWidthImage": {
+                "content": {
+                    "url": "https://www.avoyatravel.com/__media/sales-racks/mexico-resorts-map-1920.png",
+                    "mobileUrl": "https://www.avoyatravel.com/__media/sales-racks/mexico-resorts-map-640.png"
+                }
+            },
+            "slider": {
+                "content": {
+                    "label": "slider",
+                    "ol": [
+                        {
+                            "name": "Grand Luxxe",
+                            "link": "",
+                            "mapImage": "https://www.avoyatravel.com/__media/sales-racks/Vidanta_GrandLuxxe.jpg",
+                            "title": "Grand Luxxe",
+                            "paragraph": "This is the premier resort of Vidanta. Expect a sophisticated vacation where every desire is satisfied. Exclusive amenities and personalized service are above and beyond at these properties. Located in Nuevo Vallarta and Riviera Maya, you can enjoy incredible pools, beach cabanas, and luxury restaurants in some of Mexico’s most remarkable destinations.&nbsp;&nbsp;"
+                        },
+                        {
+                            "name": "The Grand Bliss",
+                            "link": "",
+                            "mapImage": "https://www.avoyatravel.com/__media/sales-racks/Vidanta_TheGrandBliss.jpg",
+                            "title": "The Grand Bliss",
+                            "paragraph": "&nbsp; The elegance is in the details of this romantic and private escape. With locations in Riviera Maya and Nuevo Vallarta, you can enjoy the modern conveniences of this boutique hotel at your own relaxing pace. Get ready to experience the exquisite.&nbsp;&nbsp;"
+                        },
+                        {
+                            "name": "The Grand Mayan",
+                            "link": "",
+                            "mapImage": "https://www.avoyatravel.com/__media/sales-racks/Vidanta_TheGrandMayan.jpg",
+                            "title": "The Grand Mayan",
+                            "paragraph": "\n\nAt the Grand Mayan, happiness is their tradition. Here, ancestral wisdom meets the highest of luxury. Unique spaces and cultural opportunities the whole family can enjoy make staying at one of their Riviera Maya, Nuevo Vallarta, Acapulco, or Puerto Penasco properties as enriching as a vacation can get. This continues to be one of Vidanta’s most popular resorts.\n\n"
+                        },
+                        {
+                            "name": "The Bliss",
+                            "title": "The Bliss",
+                            "paragraph": "&nbsp; Peaceful, exquisite, and intimate. Pristine white-sand beaches and casual spaces that exude comfort will make you fall in love with this escape in Riviera Maya. The Bliss offers a modern boutique experience with world-class service that is hard to beat. Don’t stress – let yourself slip away into pure vacation bliss at this tropical getaway.&nbsp;&nbsp;",
+                            "mapImage": "https://www.avoyatravel.com/__media/sales-racks/Vidanta_TheBliss.jpg"
+                        },
+                        {
+                            "name": "Mayan Palace",
+                            "title": "Mayan Palace",
+                            "paragraph": "&nbsp; The Mayan Palace has a long legacy of fun, relaxation, and unforgettable happiness. Well-known in Mexico as one of the top resorts, these resorts are perfect for families of all sizes. Make this exotic escape to Riviera Maya, Nuevo Vallarta, Mazatlan, Acapulco, Puerto Vallarta, or Puerto Penasco your favorite family tradition.&nbsp;&nbsp;",
+                            "mapImage": "https://www.avoyatravel.com/__media/sales-racks/Vidanta_MayanPlace.jpg"
+                        }
+                    ],
+                    "title": "Choose from one of these thingers"
+                }
+            },
+            "navigationBlock": {
+                "content": {
+                    "label": "Popular Destinations",
+                    "ol": [
+                        {
+                            "name": "Mexico",
+                            "url": "http://name2.com"
+                        },
+                        {
+                            "name": "Europe",
+                            "url": "http://name3.com"
+                        },
+                        {
+                            "name": "Caribbean"
+                        },
+                        {
+                            "name": "Bahamas"
+                        },
+                        {
+                            "name": "Alaska"
+                        }
+                    ],
+                    "listUrl": "/api/v1/list/search?onlyVisible=false&isPublished=true&sortOrder=createdDate%20desc&rand",
+                    "title": "Filter by Destination"
+                }
+            },
+            "searchResults": {
+                "content": {
+                    "maxrows": 25,
+                    "offset": "",
+                    "sortOrder": "sailDate ASC",
+                    "page": 1,
+                    "esquery": "",
+                    "search": "",
+                    "dateList": "",
+                    "startDate": "",
+                    "endDate": "",
+                    "returnBy": "",
+                    "shipList": "",
+                    "promotionList": "",
+                    "rivers": "",
+                    "destList": "Alaska,Bahamas,Caribbean,Europe,Mediterranean,Mexico",
+                    "supplierList": "",
+                    "specialPricing": "",
+                    "residentOf": "",
+                    "largeMapHTML": "",
+                    "returnOptions": "",
+                    "embarkingPortCodes": "",
+                    "cabinTypes": "",
+                    "lengthList": "7-9,10-14,15-999"
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "heroWithCta",
+                    "label": "Hero with CTA",
+                    "model": "heroWithCta",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "titleParagraphBlock",
+                    "label": "Title w/ Paragraph",
+                    "model": "paragraphClean",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "cardTitleListCta",
+                    "label": "Coupon CTA",
+                    "model": "couponStyle",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "label": "Terms & Conditions",
+                    "type": "wysiwyg",
+                    "model": "terms",
+                    "config": {
+                        "hideModules": {
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "justifyLeft": true,
+                            "justifyCenter": true,
+                            "justifyRight": true,
+                            "headings": true,
+                            "link": false,
+                            "code": true,
+                            "orderedList": true,
+                            "unorderedList": true,
+                            "image": true,
+                            "table": true,
+                            "removeFormat": false,
+                            "separator": false
+                        },
+                        "forcePlainTextOnPaste": true
+                    }
+                },
+                {
+                    "type": "fullWidthImage",
+                    "label": "Full Width Hero",
+                    "model": "fullWidthImage",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "sliderBlockList",
+                    "label": "Slider items",
+                    "model": "slider",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "navigationBlock01",
+                    "label": "Navigation Block",
+                    "model": "navigationBlock",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "searchResult",
+                    "label": "Search Results",
+                    "model": "searchResults"
+                }
+            ]
+        }
+    }
+}

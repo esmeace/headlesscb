@@ -1,0 +1,358 @@
+{
+    "meta": {
+        "model": {
+            "title": "Best Globus Tours | Explore Top Itineraries With Avoya Travel",
+            "description": "Explore the most popular tours that Globus has to offer. To make things easy, we’ve put all the best Globus tours in one place. Browse today and call our expert agents to book the trip of a lifetime!",
+            "slug": "best-globus-tours",
+            "leadInfo": {
+                "content": {
+                    "travelType": "",
+                    "name": "Exclusive Princess Cruise Flash Sale - January 2019",
+                    "customerListID": "740",
+                    "leadSourceName": "Automated Web Request - Mktg Event Princess",
+                    "leadSourceID": "308"
+                }
+            },
+            "promoSelector": {
+                "content": {
+                    "promoID": "15134"
+                }
+            },
+            "vendorInfo": {
+                "content": {
+                    "travelType": "Cruise",
+                    "vendorName": "Princess Cruises",
+                    "vendorCode": "PC"
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Title",
+                    "model": "title"
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Description",
+                    "model": "description"
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Slug",
+                    "model": "slug"
+                },
+                {
+                    "type": "leadInfo",
+                    "label": "Lead Info",
+                    "model": "leadInfo"
+                },
+                {
+                    "type": "promoSelector",
+                    "label": "Select a Promo ID",
+                    "model": "promoSelector"
+                },
+                {
+                    "type": "vendorSelector",
+                    "label": "Vendor Selector",
+                    "model": "vendorInfo"
+                }
+            ]
+        }
+    },
+    "pageContent": {
+        "model": {
+            "heroImage": "/__media/ContentBox_300.png",
+            "h1": "Save 5% on the Best Globus Tours",
+            "paragraph": "Sandals Resorts is one of the most renowned names in hospitality and exceeds expectations for travelers who choose Ocho Rios, Jamaica. The all-inclusive Sandals Ochi Beach Resort is an unbelievable example of why people call Sandals the undisputed leader of Caribbean vacation experiences. It’s 100 acres of pure beach bliss complete with a new beach club, 11 bars, 16 restaurants and miles of beautiful turquoise-blue ocean views. Here’s what you can expect from this stunning, adults-only escape on Ochi Beach...",
+            "itineraries": [
+                {
+                    "title": "The Best of Italy",
+                    "lowestPrice": "2771",
+                    "length": 11,
+                    "startCity": "Rome",
+                    "endCity": "Rome",
+                    "startDate": "Mar 2019",
+                    "endDate": "Nov 2019",
+                    "url": "https://www.avoyatravel.com/tours/Globus/112106/The-Best-ofItaly.html",
+                    "mapURL": "http://www.globusjourneys.com/images/maps/Globus/2019/LB.jpg",
+                    "dealsCount": 6,
+                    "leadInfo": {
+                        "AVCTourID": 112106,
+                        "DateList": [
+                            {
+                                "date": 1552008316000
+                            },
+                            {
+                                "date": 1552008320000
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "The Best of Italy",
+                    "lowestPrice": "2771",
+                    "length": 11,
+                    "startCity": "Rome",
+                    "endCity": "Rome",
+                    "startDate": "Mar 2019",
+                    "endDate": "Nov 2019",
+                    "url": "https://www.avoyatravel.com/tours/Globus/112106/The-Best-ofItaly.html",
+                    "mapURL": "http://www.globusjourneys.com/images/maps/Globus/2019/LB.jpg",
+                    "dealsCount": 6,
+                    "leadInfo": {
+                        "AVCTourID": 112106,
+                        "DateList": [
+                            {
+                                "date": 1552008290000
+                            },
+                            {
+                                "date": 1554510294000
+                            }
+                        ]
+                    }
+                }
+            ],
+            "searchLink": "Count=50&Columns=ToursSearch&Order=LowestPrice&Direction=ASC&LengthList=7-9,10-14,15-999&ResidentPricing=1&maxrows=50&VendorList=Globus&page=1"
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "imagePicker",
+                    "label": "Hero Image",
+                    "model": "heroImage",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "input",
+                    "label": "H1",
+                    "inputType": "text",
+                    "model": "h1"
+                },
+                {
+                    "label": "Paragraph",
+                    "type": "wysiwyg",
+                    "model": "paragraph",
+                    "config": {
+                        "hideModules": {
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "justifyLeft": true,
+                            "justifyCenter": true,
+                            "justifyRight": true,
+                            "headings": true,
+                            "link": false,
+                            "code": true,
+                            "orderedList": true,
+                            "unorderedList": true,
+                            "image": true,
+                            "table": true,
+                            "removeFormat": false,
+                            "separator": false
+                        },
+                        "forcePlainTextOnPaste": true
+                    }
+                },
+                {
+                    "type": "array",
+                    "label": "Itineraries",
+                    "model": "itineraries",
+                    "dragOptions": {
+                        "animation": 0,
+                        "group": "ol",
+                        "disabled": false,
+                        "ghostClass": "ghost"
+                    },
+                    "fieldClasses": [
+                        "list-group"
+                    ],
+                    "showRemoveButton": true,
+                    "removeElementButtonLabel": "",
+                    "removeElementButtonClasses": [
+                        "tw-bg-red",
+                        "hover:tw-bg-red-dark",
+                        "tw-text-white",
+                        "tw-font-bold",
+                        "tw-py-1",
+                        "tw-px-3"
+                    ],
+                    "newElementButtonLabel": " Add Item",
+                    "newElementButtonClasses": [
+                        "tw-bg-blue",
+                        "hover:tw-bg-blue-dark",
+                        "tw-text-white",
+                        "tw-font-bold",
+                        "tw-py-1",
+                        "tw-px-3",
+                        "tw-float-right"
+                    ],
+                    "itemContainerClasses": [
+                        "list-group-item"
+                    ],
+                    "itemContainerComponent": "listItemContainer",
+                    "itemContainerExpandButtonLabel": "",
+                    "itemContainerCollapseButtonLabel": "",
+                    "itemContainerExpandCollapseButtonClasses": [
+                        "tw-bg-green",
+                        "hover:tw-bg-green-dark",
+                        "tw-text-white",
+                        "tw-font-bold",
+                        "tw-py-1",
+                        "tw-px-3"
+                    ],
+                    "items": {
+                        "label": "Itinerary",
+                        "type": "object",
+                        "default": {},
+                        "schema": {
+                            "fields": [
+                                {
+                                    "type": "input",
+                                    "inputType": "text",
+                                    "label": "Title",
+                                    "model": "title"
+                                },
+                                {
+                                    "type": "input",
+                                    "inputType": "number",
+                                    "label": "Lowest Price",
+                                    "model": "lowestPrice"
+                                },
+                                {
+                                    "type": "input",
+                                    "inputType": "number",
+                                    "label": "Length",
+                                    "model": "length"
+                                },
+                                {
+                                    "type": "input",
+                                    "inputType": "text",
+                                    "label": "Start City",
+                                    "model": "startCity"
+                                },
+                                {
+                                    "type": "input",
+                                    "inputType": "text",
+                                    "label": "End City",
+                                    "model": "endCity"
+                                },
+                                {
+                                    "type": "dateTimePicker",
+                                    "label": "Start Date",
+                                    "model": "startDate",
+                                    "featured": false,
+                                    "disabled": false,
+                                    "dateTimePickerOptions": {
+                                        "format": "MMMM, D YYYY HH:mm:ss ZZ"
+                                    }
+                                },
+                                {
+                                    "type": "dateTimePicker",
+                                    "label": "End Date",
+                                    "model": "endDate",
+                                    "featured": false,
+                                    "disabled": false,
+                                    "dateTimePickerOptions": {
+                                        "format": "MMMM, D YYYY HH:mm:ss ZZ"
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "inputType": "url",
+                                    "label": "URL",
+                                    "model": "url"
+                                },
+                                {
+                                    "type": "input",
+                                    "inputType": "url",
+                                    "label": "Map URL",
+                                    "model": "mapURL"
+                                },
+                                {
+                                    "type": "input",
+                                    "inputType": "number",
+                                    "label": "Deals Count",
+                                    "model": "dealsCount"
+                                },
+                                {
+                                    "type": "input",
+                                    "inputType": "text",
+                                    "label": "leadInfo AVCTourID",
+                                    "model": "leadInfo.AVCTourID"
+                                },
+                                {
+                                    "type": "array",
+                                    "label": "leadInfo DateList",
+                                    "model": "leadInfo.DateList",
+                                    "showRemoveButton": true,
+                                    "dragOptions": {
+                                        "animation": 0,
+                                        "group": "ol",
+                                        "disabled": false,
+                                        "ghostClass": "ghost"
+                                    },
+                                    "fieldClasses": [
+                                        "list-group",
+                                        "tw-pt-10"
+                                    ],
+                                    "itemContainerClasses": [
+                                        "list-group-item"
+                                    ],
+                                    "removeElementButtonLabel": "",
+                                    "removeElementButtonClasses": [
+                                        "tw-bg-red",
+                                        "hover:tw-bg-red-dark",
+                                        "tw-text-white",
+                                        "tw-font-bold",
+                                        "tw-py-1",
+                                        "tw-px-3"
+                                    ],
+                                    "newElementButtonLabel": " Add Item",
+                                    "newElementButtonClasses": [
+                                        "tw-bg-blue",
+                                        "hover:tw-bg-blue-dark",
+                                        "tw-text-white",
+                                        "tw-font-bold",
+                                        "tw-py-1",
+                                        "tw-px-3",
+                                        "tw-float-right"
+                                    ],
+                                    "items": {
+                                        "type": "object",
+                                        "default": {},
+                                        "schema": {
+                                            "fields": [
+                                                {
+                                                    "type": "dateTimePicker",
+                                                    "label": "Date",
+                                                    "model": "date",
+                                                    "featured": false,
+                                                    "disabled": false,
+                                                    "dateTimePickerOptions": {
+                                                        "format": "MMMM, D YYYY HH:mm:ss ZZ"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Search Link",
+                    "inputType": "text",
+                    "model": "searchLink"
+                }
+            ]
+        }
+    }
+}

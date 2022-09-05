@@ -1,0 +1,224 @@
+{
+    "meta": {
+        "model": {
+            "leadInfo": {
+                "content": {
+                    "travelType": "",
+                    "name": "",
+                    "customerListID": "",
+                    "leadSourceName": "",
+                    "leadSourceID": ""
+                }
+            },
+            "promoSelector": {
+                "content": {
+                    "promoID": ""
+                }
+            },
+            "vendorInfo": {
+                "content": {
+                    "travelType": "",
+                    "vendorName": "",
+                    "vendorCode": ""
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "leadInfo",
+                    "label": "Lead Info",
+                    "model": "leadInfo"
+                },
+                {
+                    "type": "promoSelector",
+                    "label": "Select a Promo ID",
+                    "model": "promoSelector"
+                },
+                {
+                    "type": "vendorSelector",
+                    "label": "Vendor Selector",
+                    "model": "vendorInfo"
+                }
+            ]
+        }
+    },
+    "pageContent": {
+        "model": {
+            "heroWithTimer": {
+                "content": {
+                    "title": "",
+                    "subtitle": "",
+                    "url": "https://www.avoyatravel.com/img/jpg/promos/1017_1000x200_Last_Minute_Cruise_Deals_Header.jpg",
+                    "mobileUrl": "https://www.avoyatravel.com/img/jpg/promos/1017_640x250_Last_Minute_Cruise_Deals_Header.jpg",
+                    "deadline": 1604563200000,
+                    "color": "white",
+                    "sectionAlignment": "left"
+                },
+                "config": {
+                    "bannerSectionEnabled": false,
+                    "sectionAlignments": [
+                        "left",
+                        "right"
+                    ],
+                    "colors": [
+                        "orange",
+                        "white"
+                    ]
+                }
+            },
+            "titleParagraph": {
+                "content": {
+                    "title": "Last Minute Cruise Deals",
+                    "paragraph": "There's no time like the present to score last minute cruise deals with Avoya Travel! If you book now, you can find amazing last minute cruises to Europe, Alaska, and Caribbean. We've put together some of our best rates on cruises from popular ports like Miami, Galveston, Fort Lauderdale and more. There's never been a better time to book your next vacation!"
+                }
+            },
+            "navigationBlock01-01": {
+                "content": {
+                    "label": "Popular Destinations",
+                    "ol": [
+                        {
+                            "name": "All",
+                            "url": "http://name1.com"
+                        },
+                        {
+                            "name": "Caribbean",
+                            "url": "http://name2.com"
+                        },
+                        {
+                            "name": "Bahamas",
+                            "url": "http://name3.com"
+                        },
+                        {
+                            "name": "Alaska"
+                        },
+                        {
+                            "name": "Europe"
+                        }
+                    ],
+                    "listUrl": "/api/v1/list/search?onlyVisible=false&isPublished=true&sortOrder=createdDate%20desc&rand"
+                }
+            },
+            "navigationBlock01-02": {
+                "content": {
+                    "label": "Departure Ports",
+                    "ol": [
+                        {
+                            "name": "Miami, Florida",
+                            "url": "http://name1.com"
+                        },
+                        {
+                            "name": "Galveston, Texas",
+                            "url": "http://name2.com"
+                        },
+                        {
+                            "name": "New Orleans, Louisiana",
+                            "url": "http://name3.com"
+                        },
+                        {
+                            "name": "Tampa, Florida"
+                        },
+                        {
+                            "name": "San Diego, California"
+                        },
+                        {
+                            "name": "Los Angeles, California"
+                        },
+                        {
+                            "name": "San Francisco, California"
+                        },
+                        {
+                            "name": "Seattle, Washington"
+                        },
+                        {
+                            "name": "Port Canaveral, Florida"
+                        },
+                        {
+                            "name": "Fort Lauderdale, Florida"
+                        },
+                        {
+                            "name": "New York City, New York"
+                        },
+                        {
+                            "name": "Baltimore/Washington, Maryland"
+                        },
+                        {
+                            "name": "Bayonne, New Jersey"
+                        },
+                        {
+                            "name": "Boston, Massachusetts"
+                        },
+                        {
+                            "name": "Barcelona, Spain"
+                        },
+                        {
+                            "name": "Rome (Civitavecchia), Italy"
+                        }
+                    ],
+                    "listUrl": "/api/v1/list/search?onlyVisible=false&isPublished=true&sortOrder=createdDate%20desc&rand"
+                }
+            },
+            "searchResults": {
+                "content": {
+                    "maxrows": 25,
+                    "offset": "",
+                    "sortOrder": "sailDate ASC",
+                    "page": 1,
+                    "esquery": "",
+                    "search": "",
+                    "dateList": "",
+                    "startDate": "",
+                    "endDate": "",
+                    "returnBy": "",
+                    "shipList": "",
+                    "promotionList": "",
+                    "rivers": "",
+                    "destList": "",
+                    "supplierList": "",
+                    "specialPricing": "",
+                    "residentOf": "",
+                    "largeMapHTML": "",
+                    "returnOptions": "",
+                    "embarkingPortCodes": "",
+                    "cabinTypes": "",
+                    "lengthList": "7-9,10-14,15-999,3-6"
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "heroWithTimerBannerList",
+                    "label": "Hero with Timer",
+                    "model": "heroWithTimer",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "titleParagraphBlock",
+                    "label": "Title Paragraph",
+                    "model": "titleParagraph",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "navigationBlock01",
+                    "model": "navigationBlock01-01",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "navigationBlock01",
+                    "model": "navigationBlock01-02",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "searchResult",
+                    "label": "Search Results",
+                    "model": "searchResults"
+                }
+            ]
+        }
+    }
+}

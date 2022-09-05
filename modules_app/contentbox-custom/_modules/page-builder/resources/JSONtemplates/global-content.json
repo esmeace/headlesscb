@@ -1,0 +1,164 @@
+{
+    "meta": "",
+    "categories": [],
+    "pageContent": {
+        "model": {
+            "headerFeature": {
+                "headerPromoEndDate": 1609487939000,
+                "featureType": "modal",
+                "modalContent": "\n\n<div class=\\\"flex flex-col md:flex-row\\\">\n\n    <div class=\\\"md:w-1/2 md:mr-8\\\">\n\n        <div class=\\\"mb-2 text-xl font-semibold\\\">No Avoya Fees.</div>\n\n        <p class=\\\"text-base\\\">At Avoya Travel, we won't add any extra fees to book, change, or cancel your cruise or tour. And unlike many other travel companies, we don't believe in charging hidden fees. While cruise line and tour operator fees still apply, you can be assured that we won't surprise you with any Avoya fees. <a class=\\\"link-blue\\\" href=\\\"/about/resources/\\\">Learn More</a></p>\n\n    </div>\n\n    <div class=\\\"md:w-1/2\\\">\n\n        <div class=\\\"mb-2 text-xl font-semibold\\\">Low Price Guarantee</div>\n\n        <p class=\\\"text-base\\\">Travel purchases deserve piece of mind and with Avoya Travel's Low Price Guarantee you can be assured that you won't over pay for your cruises, tour, or vacation package. If you find a valid lower rate before you book or within 24 hours of your booking, we'll match it - it's just as simple as that. <a class=\\\"link-blue\\\" href=\\\"/about/resources/#lowprice\\\">Learn More</a></p>\n\n    </div>\n\n</div>\n",
+                "link": "/about/resources/",
+                "headerPromoStartDate": 1567839600000,
+                "mobileparagraph": "No Avoya Fees on Cruises or Tours.",
+                "linktext": "Learn More",
+                "paragraph": "No Avoya Fees on Cruises or Tours: Book, change, or cancel without paying any Avoya fees. Plus, our Low Price Guarantee!"
+            },
+            "featuredSuppliers": {
+                "content": {
+                    "ol": [
+                        {
+                            "name": "Oceania",
+                            "vendorCode": "OE",
+                            "startDate": 1609487939000,
+                            "endDate": 1567839600000
+                        }
+                    ]
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "model": "headerFeature.featureType",
+                    "values": [
+                        {
+                            "name": "link",
+                            "value": "link"
+                        },
+                        {
+                            "name": "modal",
+                            "value": "modal"
+                        }
+                    ],
+                    "type": "radios",
+                    "labelClasses": "float-left pr-12",
+                    "label": "Feature Type"
+                },
+                {
+                    "model": "headerFeature.mobileparagraph",
+                    "type": "wysiwyg",
+                    "config": {
+                        "hideModules": {
+                            "underline": false,
+                            "orderedList": true,
+                            "bold": false,
+                            "headings": true,
+                            "removeFormat": false,
+                            "italic": false,
+                            "code": true,
+                            "table": true,
+                            "unorderedList": true,
+                            "separator": false,
+                            "image": true,
+                            "justifyRight": true,
+                            "link": false,
+                            "justifyLeft": true,
+                            "justifyCenter": true
+                        },
+                        "forcePlainTextOnPaste": false
+                    },
+                    "label": "Header Promo Mobile Paragraph"
+                },
+                {
+                    "model": "headerFeature.paragraph",
+                    "type": "wysiwyg",
+                    "config": {
+                        "hideModules": {
+                            "underline": false,
+                            "orderedList": true,
+                            "bold": false,
+                            "headings": true,
+                            "removeFormat": false,
+                            "italic": false,
+                            "code": true,
+                            "table": true,
+                            "unorderedList": true,
+                            "separator": false,
+                            "image": true,
+                            "justifyRight": true,
+                            "link": false,
+                            "justifyLeft": true,
+                            "justifyCenter": true
+                        },
+                        "forcePlainTextOnPaste": true
+                    },
+                    "label": "Header Promo Paragraph"
+                },
+                {
+                    "model": "modalContent",
+                    "config": {
+                        "hideModules": {
+                            "underline": true,
+                            "orderedList": true,
+                            "bold": true,
+                            "headings": true,
+                            "removeFormat": true,
+                            "code": false,
+                            "italic": true,
+                            "table": true,
+                            "separator": true,
+                            "unorderedList": true,
+                            "image": true,
+                            "justifyRight": true,
+                            "link": true,
+                            "justifyLeft": true,
+                            "justifyCenter": true
+                        },
+                        "forcePlainTextOnPaste": false
+                    },
+                    "type": "wysiwyg",
+                    "label": "Modal Content"
+                },
+                {
+                    "inputType": "text",
+                    "model": "headerFeature.link",
+                    "type": "input",
+                    "label": "Link"
+                },
+                {
+                    "inputType": "text",
+                    "model": "headerFeature.linktext",
+                    "type": "input",
+                    "label": "Link Text"
+                },
+                {
+                    "model": "headerFeature.headerPromoStartDate",
+                    "disabled": false,
+                    "type": "dateTimePicker",
+                    "featured": false,
+                    "label": "Start Date",
+                    "dateTimePickerOptions": {
+                        "format": "MMMM, D YYYY HH:mm:ss ZZ"
+                    }
+                },
+                {
+                    "model": "headerFeature.headerPromoEndDate",
+                    "disabled": false,
+                    "type": "dateTimePicker",
+                    "featured": false,
+                    "label": "End Date",
+                    "dateTimePickerOptions": {
+                        "format": "MMMM, D YYYY HH:mm:ss ZZ"
+                    }
+                },
+                {
+                    "type": "twoTextFieldsWithDates",
+                    "label": "Featured Suppliers",
+                    "model": "featuredSuppliers",
+                    "featured": false,
+                    "disabled": false
+                }
+            ]
+        }
+    }
+}

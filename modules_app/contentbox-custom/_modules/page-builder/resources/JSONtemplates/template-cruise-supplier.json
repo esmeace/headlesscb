@@ -1,0 +1,141 @@
+{
+    "meta": {
+        "model": {
+            "title": "title",
+            "description": "Description",
+            "slug": "slug-slug"
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Title",
+                    "model": "title"
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Description",
+                    "model": "description"
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Slug",
+                    "model": "slug"
+                }
+            ]
+        }
+    },
+    "pageContent": {
+        "model": {
+            "heroProperty": {
+                "content": {
+                    "supplier": "Globus",
+                    "url": "/__media/premium-campaigns/princess-cruises/1901_header.jpg",
+                    "mobileUrl": "/__media/premium-campaigns/princess-cruises/1901_header-mobile.jpg"
+                }
+            },
+            "supplierExperience": "",
+            "destinations":{
+                "content": {
+                    "ol": [
+                        "Caribbean",
+                        "Europe",
+                        "Alaska"
+                    ]
+                }
+            },
+            "featuredShips":{
+                "content": {
+                    "ol": [
+                        "ship 1",
+                        "ship 2",
+                        "ship 3"
+                    ]
+                }
+            },
+            "articleImage": "/__media/ContentBox_300.png",
+            "faqs": {
+                "content": {
+                    "label": "faqs",
+                    "ol": [
+                        {
+                            "name": "question 1",
+                            "paragraph": "question content"
+                        },
+                        {
+                            "name": "question 2",
+                            "paragraph": "question content"
+                        },
+                        {
+                            "name": "question 3",
+                            "paragraph": "question content"
+                        }
+                    ]
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "heroProperty",
+                    "label": "Hero Property",
+                    "model": "heroProperty",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "label": "Supplier Experience",
+                    "type": "wysiwyg",
+                    "model": "supplierExperience",
+                    "config": {
+                        "hideModules": {
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "justifyLeft": true,
+                            "justifyCenter": true,
+                            "justifyRight": true,
+                            "headings": true,
+                            "link": false,
+                            "code": true,
+                            "orderedList": true,
+                            "unorderedList": true,
+                            "image": true,
+                            "table": true,
+                            "removeFormat": false,
+                            "separator": false
+                        },
+                        "forcePlainTextOnPaste": true
+                    }
+                },
+                {
+                    "type": "list",
+                    "label": "Destinations",
+                    "model": "destinations"
+                },
+                {
+                    "type": "list",
+                    "label": "Featured Ships",
+                    "model": "featuredShips"
+                },
+                {
+                    "type": "imagePicker",
+                    "label": "Article Image",
+                    "model": "articleImage",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "titleAndParagraphList",
+                    "label": "FAQs",
+                    "model": "faqs",
+                    "featured": false,
+                    "disabled": false
+                }
+            ]
+        }
+    }
+}

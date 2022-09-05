@@ -1,0 +1,256 @@
+{
+    "meta": {
+        "model": {
+            "title": "title",
+            "description": "Description",
+            "slug": "slug-slug"
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Title",
+                    "model": "title"
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Description",
+                    "model": "description"
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Slug",
+                    "model": "slug"
+                }
+            ]
+        }
+    },
+    "pageContent": {
+        "model": {
+            "heroProperty": {
+                "content": {
+                    "propertyName": "Ochi Beach Resort",
+                    "location": "Ocho Rios, Jamaica",
+                    "supplier": "Sandals Resort",
+                    "url": "/__media/premium-campaigns/princess-cruises/1901_header.jpg",
+                    "mobileUrl": "/__media/premium-campaigns/princess-cruises/1901_header-mobile.jpg"
+                }
+            },
+            "paragraph": "Sandals Resorts is one of the most renowned names in hospitality and exceeds expectations for travelers who choose Ocho Rios, Jamaica. The all-inclusive Sandals Ochi Beach Resort is an unbelievable example of why people call Sandals the undisputed leader of Caribbean vacation experiences. It’s 100 acres of pure beach bliss complete with a new beach club, 11 bars, 16 restaurants and miles of beautiful turquoise-blue ocean views. Here’s what you can expect from this stunning, adults-only escape on Ochi Beach...",
+            "videoUrl": "https://www.youtube.com/watch?v=Go7nVnFTyek",
+            "mapImage": "/__media/ContentBox_300.png",
+            "resortAddress": "130131 Main Street\nOcho Rios, Jamaica",
+            "nearbyAirport": "Sangster International Airport",
+            "locationSpecificList": "\n\nDolphin Cove - 11 minute drive - Swimming with dolphins\nJames Bond Beach - 23 minute drive - Beautiful secluded beaches\nCool Blue Hole - 23 minute drive - Stunning waterfalls and swimming holes\n",
+            "amenities": [
+                {
+                    "title": "Restaurants",
+                    "subtitle": "16 Unlimited Dining Venues",
+                    "image": "/__media/ContentBox_300.png",
+                    "paragraphList": "\n\nKelly's Dockside\nManor House\nLe Gourmand\nVista Sky\n",
+                    "closedByDefault": true
+                },
+                {
+                    "title": "Weddings",
+                    "paragraphList": "Earn a free wedding at our Over-the-water Serenity Wedding Chapel when you book a stay of 3 nights or longer.",
+                    "closedByDefault": true
+                }
+            ]
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "heroProperty",
+                    "label": "Hero Property",
+                    "model": "heroProperty",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "label": "Paragraph",
+                    "type": "wysiwyg",
+                    "model": "paragraph",
+                    "config": {
+                        "hideModules": {
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "justifyLeft": true,
+                            "justifyCenter": true,
+                            "justifyRight": true,
+                            "headings": true,
+                            "link": false,
+                            "code": true,
+                            "orderedList": true,
+                            "unorderedList": true,
+                            "image": true,
+                            "table": true,
+                            "removeFormat": false,
+                            "separator": false
+                        },
+                        "forcePlainTextOnPaste": true
+                    }
+                },
+                {
+                    "type": "youtubeVideo",
+                    "label": "Video URL",
+                    "model": "videoUrl",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "arrayNondraggable",
+                    "label": "Amenities",
+                    "model": "amenities",
+                    "dragOptions": {
+                        "animation": 0,
+                        "group": "ol",
+                        "disabled": false,
+                        "ghostClass": "ghost"
+                    },
+                    "fieldClasses": [
+                        "list-group"
+                    ],
+                    "showRemoveButton": true,
+                    "removeElementButtonLabel": "",
+                    "removeElementButtonClasses": [
+                        "tw-bg-red",
+                        "hover:tw-bg-red-dark",
+                        "tw-text-white",
+                        "tw-font-bold",
+                        "tw-py-1",
+                        "tw-px-3"
+                    ],
+                    "newElementButtonLabel": " Add Item",
+                    "newElementButtonClasses": [
+                        "tw-bg-blue",
+                        "hover:tw-bg-blue-dark",
+                        "tw-text-white",
+                        "tw-font-bold",
+                        "tw-py-1",
+                        "tw-px-3",
+                        "tw-float-right"
+                    ],
+                    "itemContainerClasses": [
+                        "list-group-item"
+                    ],
+                    "itemContainerComponent": "listItemContainer",
+                    "itemContainerExpandButtonLabel": "",
+                    "itemContainerCollapseButtonLabel": "",
+                    "itemContainerExpandCollapseButtonClasses": [
+                        "tw-bg-green",
+                        "hover:tw-bg-green-dark",
+                        "tw-text-white",
+                        "tw-font-bold",
+                        "tw-py-1",
+                        "tw-px-3"
+                    ],
+                    "items": {
+                        "type": "object",
+                        "label": "Amenity",
+                        "default": {},
+                        "schema": {
+                            "fields": [
+                                {
+                                    "type": "input",
+                                    "inputType": "text",
+                                    "label": "Title",
+                                    "model": "title"
+                                },
+                                {
+                                    "type": "input",
+                                    "inputType": "text",
+                                    "label": "Subtitle",
+                                    "model": "subtitle"
+                                },
+                                {
+                                    "type": "imagePicker",
+                                    "label": "Image",
+                                    "model": "image"
+                                },
+                                {
+                                    "label": "Paragraph / List",
+                                    "type": "wysiwyg",
+                                    "model": "paragraphList",
+                                    "config": {
+                                        "hideModules": {
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "link": false,
+                                            "orderedList": false,
+                                            "unorderedList": false,
+                                            "justifyLeft": true,
+                                            "justifyCenter": true,
+                                            "justifyRight": true,
+                                            "headings": true,
+                                            "code": true,
+                                            "image": true,
+                                            "table": true,
+                                            "removeFormat": false,
+                                            "separator": false
+                                        },
+                                        "forcePlainTextOnPaste": true
+                                    }
+                                },
+                                {
+                                    "type": "checkbox",
+                                    "label": "Closed By Default",
+                                    "model": "closedByDefault",
+                                    "default": true
+                                }
+                            ]
+                        },
+                        "id": "amenities1"
+                    }
+                },
+                {
+                    "type": "imagePicker",
+                    "label": "Map Image",
+                    "model": "mapImage",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "textArea",
+                    "label": "Resort Adress",
+                    "model": "resortAddress"
+                },
+                {
+                    "type": "input",
+                    "label": "Nearby Airport",
+                    "inputType": "text",
+                    "model": "nearbyAirport"
+                },
+                {
+                    "label": "Location Specific List",
+                    "type": "wysiwyg",
+                    "model": "locationSpecificList",
+                    "config": {
+                        "hideModules": {
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "link": false,
+                            "orderedList": false,
+                            "unorderedList": false,
+                            "justifyLeft": true,
+                            "justifyCenter": true,
+                            "justifyRight": true,
+                            "headings": true,
+                            "code": true,
+                            "image": true,
+                            "table": true,
+                            "removeFormat": false,
+                            "separator": false
+                        },
+                        "forcePlainTextOnPaste": true
+                    }
+                }
+            ]
+        }
+    }
+}

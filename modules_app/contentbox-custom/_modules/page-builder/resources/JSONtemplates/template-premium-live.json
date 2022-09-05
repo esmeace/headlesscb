@@ -1,0 +1,173 @@
+{
+    "meta": {
+        "model": {
+            "leadInfo": {
+                "content": {
+                    "travelType": "",
+                    "name": "Exclusive Paul Gauguin Cruise Sale - April 2019",
+                    "customerListID": "763",
+                    "leadSourceName": "Automated Web Request - Mktg Event Paul Gauguin",
+                    "leadSourceID": "272"
+                }
+            },
+            "promoSelector": {
+                "content": {
+                    "promoID": "15387"
+                }
+            },
+            "vendorInfo": {
+                "content": {
+                    "travelType": "Cruise",
+                    "vendorName": "Paul Gauguin Cruises",
+                    "vendorCode": "PGC"
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "leadInfo",
+                    "label": "Lead Info",
+                    "model": "leadInfo"
+                },
+                {
+                    "type": "promoSelector",
+                    "label": "Select a Promo ID",
+                    "model": "promoSelector"
+                },
+                {
+                    "type": "vendorSelector",
+                    "label": "Vendor Selector",
+                    "model": "vendorInfo"
+                }
+            ]
+        }
+    },
+    "pageContent": {
+        "model": {
+            "heroWithCta": {
+                "content": {
+                    "title": "Exclusive Paul Gauguin Cruise Sale",
+                    "subtitle": "Luxury Voyages for Less",
+                    "url": "/__media/premium-campaigns/paul-gauguin-cruises/1920x450_PGC_0325.jpg",
+                    "mobileUrl": "/__media/premium-campaigns/paul-gauguin-cruises/658x658_PGC_0325.jpg",
+                    "alignment": "center",
+                    "cta": {
+                        "visible": true,
+                        "type": "filled",
+                        "color": "orange"
+                    }
+                },
+                "config": {
+                    "linkColors": [
+                        "red",
+                        "yellow"
+                    ],
+                    "alignments": [
+                        "left",
+                        "center",
+                        "right"
+                    ],
+                    "ctaTypes": [
+                        "hollow",
+                        "filled"
+                    ],
+                    "ctaColors": [
+                        "orange",
+                        "blue"
+                    ]
+                }
+            },
+            "contentBlock01": {
+                "content": {
+                    "title": "THE SOUTH PACIFIC IS CALLING!",
+                    "p1": "Searching for a luxurious tropical getaway at an unbeatable value? Take advantage of our Exclusive Paul Gauguin Cruise Sale featuring above and beyond savings on must-experience itineraries exploring the dreamy South Pacific! Get ready for sunshine, white sand beaches, and more onboard a one-of-a-kind cruise that will simply take your breath away.",
+                    "subtitle": "Bonuses Only from Avoya Travel",
+                    "ol": [
+                        "Up to $700 Free Onboard Credit – Exclusive!",
+                        "50% Off Cruise Fares",
+                        "Complimentary Gratuities",
+                        "Free Beverages",
+                        "Plus, More!"
+                    ],
+                    "p2": "To receive the best savings and lowest rates, you must book no later than April 15, 2019. Take advantage of this unheard-of offer on select sailings and categories by calling us at [phoneNumber] and we will connect you with an Independent Paul Gauguin Cruises Vacation Planner who will help you plan the adventure of a lifetime."
+                }
+            },
+            "searchResults": {
+                "content": {
+                    "maxrows": 25,
+                    "offset": "",
+                    "sortOrder": "LowestPrice ASC",
+                    "page": 1,
+                    "esquery": "",
+                    "search": "",
+                    "dateList": "",
+                    "startDate": "04/01/2019",
+                    "endDate": "12/31/2019",
+                    "returnBy": "",
+                    "shipList": "",
+                    "promotionList": "",
+                    "rivers": "",
+                    "destList": "",
+                    "supplierList": "",
+                    "specialPricing": "",
+                    "residentOf": "",
+                    "largeMapHTML": "",
+                    "returnOptions": "",
+                    "embarkingPortCodes": "",
+                    "cabinTypes": "",
+                    "lengthList": "7-9,10-14,15-999"
+                }
+            },
+            "terms": {
+                "content": {
+                    "p1": "The following section is for Terms. Leave this textbox as is.",
+                    "subtitle": "Book select 2019-2020 Paul Gauguin Cruises sailings with Avoya Travel during our Exclusive Paul Gauguin Cruise Sale to receive up to $700 Free Onboard Credit PLUS 50% Off Cruise Fares!",
+                    "ol": [
+                        "Offer applicable to new bookings only and is combinable with select offers. Please contact an Independent Paul Gauguin Cruises Vacation Planner to see what other offers may be combined with your desired sail date.",
+                        "Pricing above does not include airfare. Please contact an Independent Paul Gauguin Cruises Vacation Planner to find out about air-inclusive pricing.",
+                        "Bonuses are based on promotional fares and amenities at the time of publishing, and are subject to change or removal at any time without notice.",
+                        "Exclusive Free Onboard Credit is $200 per cabin ($100 per person), in U.S. dollars, applies to select sailings only, and applies to the 1st and 2nd guests only.",
+                        "Additional Exclusive Free Onboard Credit is up to $500 per cabin (up to $250 per person), in U.S. dollars, varies by cabin category, applies to select sailings only, applies to Balcony and higher cabins only, and applies to the 1st and 2nd guests only. Please contact an Independent Paul Gauguin Cruises Vacation Planner for more information.",
+                        "Free Onboard Credit is in U.S. dollars, has no cash value, is non-refundable, and non-transferable.",
+                        "50% Off Cruise Fares are standard on every Paul Gauguin Cruises sailing and are already reflected in the pricing above.",
+                        "Deposit must be made within the booking window for offer to apply.",
+                        "Select pricing may not be combinable with this promotion.",
+                        "Prices listed are in U.S. dollars and are cruise only, per person, based on double occupancy, and subject to availability at time of booking.",
+                        "Additional restrictions may apply, please call an Independent Paul Gauguin Cruises Vacation Planner for more information.",
+                        "Hurry, this is a limited time offer!"
+                    ],
+                    "p2": "The above section is for Terms. Leave this textbox as is."
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "heroWithCta",
+                    "label": "Hero with CTA",
+                    "model": "heroWithCta",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "contentBlock01",
+                    "model": "contentBlock01",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "searchResult",
+                    "label": "Search Results",
+                    "model": "searchResults"
+                },
+                {
+                    "type": "contentBlock01",
+                    "model": "terms",
+                    "featured": false,
+                    "disabled": false
+                }
+            ]
+        }
+    }
+}

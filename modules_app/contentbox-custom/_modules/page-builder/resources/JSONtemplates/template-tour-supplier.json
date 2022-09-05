@@ -1,0 +1,183 @@
+{
+    "meta": {
+        "model": {
+            "title": "title",
+            "description": "Description",
+            "slug": "slug-slug"
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Title",
+                    "model": "title"
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Description",
+                    "model": "description"
+                },
+                {
+                    "type": "input",
+                    "inputType": "text",
+                    "label": "Slug",
+                    "model": "slug"
+                }
+            ]
+        }
+    },
+    "pageContent": {
+        "model": {
+            "heroProperty": {
+                "content": {
+                    "supplier": "Globus",
+                    "url": "/__media/premium-campaigns/princess-cruises/1901_header.jpg",
+                    "mobileUrl": "/__media/premium-campaigns/princess-cruises/1901_header-mobile.jpg"
+                }
+            },
+            "supplierExperience": "",
+            "destinations":{
+                "content": {
+                    "ol": [
+                        "Caribbean",
+                        "Europe",
+                        "Alaska"
+                    ]
+                }
+            },
+            "itineraries": {
+                "content": {
+                    "label": "itineraries",
+                    "ol": [
+                        {
+                            "name": "Itinerary 1",
+                            "link": "/tours/[supplier name]/[tour id]/[(cleaned) tour name].html",
+                            "mapImage": "/__media/ContentBox_300.png",
+                            "itinImage": "/__media/ContentBox_300.png",
+                            "ol": [
+                                "Caribbean",
+                                "Europe",
+                                "Alaska"
+                            ],
+                            "Trip Length": "3",
+                            "paragraph": "About this itinerary",
+                            "price": ""
+                        },
+                        {
+                            "name": "Itinerary 2",
+                            "link": "/tours/[supplier name]/[tour id]/[(cleaned) tour name].html",
+                            "mapImage": "/__media/ContentBox_300.png",
+                            "itinImage": "/__media/ContentBox_300.png",
+                            "ol": [
+                                "Caribbean",
+                                "Europe",
+                                "Alaska"
+                            ],
+                            "Trip Length": "5",
+                            "paragraph": "About this itinerary",
+                            "price": ""
+                        },
+                        {
+                            "name": "Itinerary 3",
+                            "link": "/tours/[supplier name]/[tour id]/[(cleaned) tour name].html",
+                            "mapImage": "/__media/ContentBox_300.png",
+                            "itinImage": "/__media/ContentBox_300.png",
+                            "ol": [
+                                "Caribbean",
+                                "Europe",
+                                "Alaska"
+                            ],
+                            "Trip Length": "7",
+                            "paragraph": "About this itinerary",
+                            "price": ""
+                        }
+                    ]
+                }
+            },
+            "articleImage": "/__media/ContentBox_300.png",
+            "faqs": {
+                "content": {
+                    "label": "faqs",
+                    "ol": [
+                        {
+                            "name": "question 1",
+                            "paragraph": "question content"
+                        },
+                        {
+                            "name": "question 2",
+                            "paragraph": "question content"
+                        },
+                        {
+                            "name": "question 3",
+                            "paragraph": "question content"
+                        }
+                    ]
+                }
+            }
+        },
+        "schema": {
+            "fields": [
+                {
+                    "type": "heroProperty",
+                    "label": "Hero Property",
+                    "model": "heroProperty",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "label": "Supplier Experience",
+                    "type": "wysiwyg",
+                    "model": "supplierExperience",
+                    "config": {
+                        "hideModules": {
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "justifyLeft": true,
+                            "justifyCenter": true,
+                            "justifyRight": true,
+                            "headings": true,
+                            "link": false,
+                            "code": true,
+                            "orderedList": true,
+                            "unorderedList": true,
+                            "image": true,
+                            "table": true,
+                            "removeFormat": false,
+                            "separator": false
+                        },
+                        "forcePlainTextOnPaste": true
+                    }
+                },
+                {
+                    "type": "list",
+                    "label": "Destinations",
+                    "model": "destinations"
+                },
+                {
+                    "type": "imagePicker",
+                    "label": "Article Image",
+                    "model": "articleImage",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "itineraryBlockList",
+                    "label": "Itineraries",
+                    "model": "itineraries",
+                    "featured": false,
+                    "disabled": false
+                },
+                {
+                    "type": "titleAndParagraphList",
+                    "label": "FAQs",
+                    "model": "faqs",
+                    "featured": false,
+                    "disabled": false
+                }
+            ]
+        }
+    }
+}
