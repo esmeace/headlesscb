@@ -31,12 +31,14 @@
         "contentbox":"~5.3.0",
         "commandbox-dotenv":"*",
         "commandbox-cfconfig":"*",
-        "commandbox-migrations":"*"
+        "commandbox-migrations":"*",
+        "cors":"^3.0.5"
     },
     "devDependencies":{},
     "installPaths":{
         "coldbox":"coldbox/",
-        "contentbox":"modules/contentbox/"
+        "contentbox":"modules/contentbox/",
+        "cors":"modules/cors/"
     },
     "ignores":[],
     "cfmigrations":{

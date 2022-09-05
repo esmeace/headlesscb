@@ -1,9 +1,9 @@
-version: '1.0'
+version: '3.4'
 
 services:
 
   mysql:
-    image: mysql
+    image: mysql:8
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     ports:
       - "3357:3306"
@@ -31,3 +31,5 @@ services:
       - "61670:8080"
     volumes:
       - .:/app:delegated
+volumes:
+  mysql8-data:

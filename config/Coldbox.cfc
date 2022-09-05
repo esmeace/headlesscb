@@ -23,7 +23,7 @@ component {
 			appName                  : getSystemSetting( "APPNAME", "ContentBox Modular CMS" ),
 			eventName                : "event",
 			// Development Settings
-			reinitPassword           : getSystemSetting( "COLDBOX_REINITPASSWORD", "@fwPassword@" ),
+			reinitPassword           : getSystemSetting( "COLDBOX_REINITPASSWORD", "EE6E62D8AB22F41BADD85AC0894F5118" ),
 			reinitKey                : "fwreinit",
 			handlersIndexAutoReload  : false,
 			// Implicit Events

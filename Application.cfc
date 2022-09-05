@@ -101,7 +101,7 @@ component {
 		// THE DIALECT OF YOUR DATABASE OR LET HIBERNATE FIGURE IT OUT, UP TO YOU TO CONFIGURE.
 		dialect 				: request.$coldboxUtil.getSystemSetting( "ORM_DIALECT", "" ),
 		// DO NOT REMOVE THE FOLLOWING LINE OR AUTO-UPDATES MIGHT FAIL.
-		dbcreate              	: "dropcreate",
+		dbcreate              	: "update",
 		secondarycacheenabled 	: request.$coldboxUtil.getSystemSetting( "ORM_SECONDARY_CACHE", false ),
 		cacheprovider         	: request.$coldboxUtil.getSystemSetting( "ORM_SECONDARY_CACHE", "ehCache" ),
 		logSQL                	: request.$coldboxUtil.getSystemSetting( "ORM_LOGSQL", false ),
