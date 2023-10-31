@@ -1,0 +1,37 @@
+{
+    "contentbox": {
+        "manager": "cfmigrations.models.QBMigrationManager",
+        "migrationsDirectory": "modules/contentbox/migrations/",
+        "properties": {
+            "defaultGrammar": "AutoDiscover@qb",
+            "schema": "${DB_DATABASE}",
+            "migrationsTable": "cfmigrations",
+            "connectionInfo": {
+                "connectionString": "jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_DATABASE}?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC&maxReconnects=3&useLegacyDatetimeCode=false&autoReconnect=true&useSSL=false",
+                "class": "${DB_CLASS}",
+                "username": "${DB_USER}",
+                "password": "${DB_PASSWORD}",
+                "bundleName": "${DB_BUNDLENAME}",
+                "bundleVersion": "${DB_BUNDLEVERSION}"
+            }
+        }
+    },
+    "default": {
+        "manager": "cfmigrations.models.QBMigrationManager",
+        "migrationsDirectory": "resources/database/migrations/",
+        "seedsDirectory": "resources/database/seeds/",
+        "properties": {
+            "defaultGrammar": "AutoDiscover@qb",
+            "schema": "${DB_DATABASE}",
+            "migrationsTable": "cfmigrations_app",
+            "connectionInfo": {
+                "connectionString": "jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_DATABASE}?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC&maxReconnects=3&useLegacyDatetimeCode=false&autoReconnect=true&useSSL=false",
+                "class": "${DB_CLASS}",
+                "username": "${DB_USER}",
+                "password": "${DB_PASSWORD}",
+                "bundleName": "${DB_BUNDLENAME}",
+                "bundleVersion": "${DB_BUNDLEVERSION}"
+            }
+        }
+    }
+}

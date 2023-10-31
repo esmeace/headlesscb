@@ -41,22 +41,10 @@
         "cors":"modules/cors/"
     },
     "ignores":[],
-    "cfmigrations":{
-        "schema":"${DB_DATABASE}",
-        "connectionInfo":{
-            "class":"${DB_CLASS}",
-            "connectionString":"${DB_CONNECTIONSTRING}",
-            "bundleName":"${DB_BUNDLENAME}",
-            "bundleVersion":"${DB_BUNDLEVERSION}",
-            "username":"${DB_USER}",
-            "password":"${DB_PASSWORD}"
-        },
-        "defaultGrammar":"AutoDiscover@qb"
-    },
     "scripts":{
-        "contentbox:migrate":"migrate up migrationsDirectory=modules/contentbox/migrations",
+        "contentbox:migrate":"migrate install manager=contentbox && migrate up manager=contentbox verbose=true",
         "contentbox:migrate:up":"run-script contentbox:migrate",
-        "contentbox:migrate:down":"migrate down migrationsDirectory=modules/contentbox/migrations",
+        "contentbox:migrate:down":"migrate down manager=contentbox verbose=true",
         "install:2021":"!cfpm install zip,orm,mysql,postgresql,sqlserver,document,feed"
     }
 }
