@@ -22,23 +22,36 @@ build/workbench/deploy/*
 .settings/org.eclipse.core.resources.prefs
 settings.xml
 .cflintrc
-/.engine
-/.engines
-
-#runtime configuration files
-/.env
-/.*.env
-
-#Log Directories
-**/logs
-*.log
 
 #temporary files
 ehcache-config*
 **/ehcache-config*
 
-# Commandbox-installed dependencies
-modules
-coldbox
-testbox
+
+# logs
+modules/databoss/logs
+config/logs/**
+
+# NPM, Bower, ETC
+**/node_modules/*
+**/bower_components/*
+
+## Ignored Dependencies
+coldbox/*
+testbox/*
+modules/*
+**/apidocs/**
+
+# Local Connections
+config/runtime.properties.cfm
+.env
+
+# Engines
+.engine/*
+
+# Media Manager Artifacts
+modules_app/contentbox-custom/_content/**
+opt/**
+
+ortus/*
 
