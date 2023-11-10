@@ -27,7 +27,6 @@ settings.xml
 ehcache-config*
 **/ehcache-config*
 
-
 # logs
 modules/databoss/logs
 config/logs/**
@@ -48,10 +47,9 @@ config/runtime.properties.cfm
 
 # Engines
 .engine/*
+config/mysql
 
 # Media Manager Artifacts
 modules_app/contentbox-custom/_content/**
 opt/**
-
 ortus/*
-

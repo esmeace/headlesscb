@@ -11,8 +11,12 @@ services:
       MYSQL_ROOT_PASSWORD: "T0pS3cr3t1234!"
       MYSQL_PASSWORD: "T0pS3cr3t1234!"
       MYSQL_USER: sa
+      MYSQL_DATABASE: contentbox
     volumes:
-      - mysql8-data:/var/lib/mysql
+      # Mounts the database files
+      - ./config/mysql:/var/lib/mysql
+      # Seeds the database
+      - ./config/dbinit:/docker-entrypoint-initdb.d
 
   app:
     image: ortussolutions/commandbox:lucee5
@@ -66,6 +70,3 @@ services:
       - "61670:8080"
     volumes:
       - .:/app:delegated
-
-volumes:
-  mysql8-data:
