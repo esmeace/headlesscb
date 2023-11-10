@@ -19,17 +19,53 @@ services:
     depends_on:
       - mysql
     environment:
-      cfconfig_adminPassword: T0pS3cr3t1234!
-      HEALTHCHECK_URI: http://127.0.0.1:8080/config/index.cfm
+      #################################################################
+      # App Name and Environment
+      #################################################################
+      APPNAME: ContentBox Headless CMS
+      # This can be development, staging, production or custom.
+      ENVIRONMENT: development
+      # The password for the CFML Engine Administrator
+      CFCONFIG_ADMINPASSWORD: contentbox
+      # The ColdBox Reinit password
+      COLDBOX_REINITPASSWORD:
+      # How long do admin sessions last (In Minutes)
+      COLDBOX_SESSION_TIMEOUT: 60
+      # Development CBDebugger
+      CBDEBUGGER_ENABLED: false
+      #################################################################
+      # ContentBox ORM Settings
+      # --------------------------------
+      # This is used to configure the ORM via env settings usually for
+      # different RDBMS settings or options
+      #################################################################
+      ORM_DIALECT: MySQL
+      # Log sql to the console or not
+      ORM_LOGSQL: true
+      # Sql Script to execute after ORM is initialized
+      ORM_SQL_SCRIPT:
+      # Activate secondary cache or disable it
+      ORM_SECONDARY_CACHE: false
+      ORM_SECONDARY_CACHE_PROVIDER: ehcache
+      ######################################################
+      # MySQL 8 DB Driver
+      ######################################################
+      DB_CLASS: com.mysql.cj.jdbc.Driver
+      DB_DRIVER: MySQL
+      DB_BUNDLEVERSION: 8.0.24
+      DB_BUNDLENAME: com.mysql.cj
+      # DB Location
       DB_HOST: mysql
       DB_PORT: 3306
-      DB_USERNAME: sa
-      DB_PASSWORD: "T0pS3cr3t1234!"
-      DB_DATABASE: headlesscb
-      ENVIRONMENT: development
+      DB_CONNECTIONSTRING: jdbc:mysql://mysql:3306/contentbox?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useLegacyDatetimeCode=true
+      # DB Credentials
+      DB_DATABASE: contentbox
+      DB_USER: sa
+      DB_PASSWORD: T0pS3cr3t1234!
     ports:
       - "61670:8080"
     volumes:
       - .:/app:delegated
+
 volumes:
   mysql8-data:
