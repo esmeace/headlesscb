@@ -50,6 +50,6 @@ config/runtime.properties.cfm
 config/mysql
 
 # Media Manager Artifacts
-modules_app/contentbox-custom/_content/**
+#modules_app/contentbox-custom/_content/**
 opt/**
 ortus/*
