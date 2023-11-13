@@ -37,6 +37,8 @@ services:
       COLDBOX_SESSION_TIMEOUT: 60
       # Development CBDebugger
       CBDEBUGGER_ENABLED: false
+      # JWT Secret
+      JWT_SECRET: l5cjHgeCk11jpPCZKjdovA==
       #################################################################
       # ContentBox ORM Settings
       # --------------------------------
