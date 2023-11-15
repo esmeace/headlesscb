@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 8.0.23)
 # Database: contentbox
-# Generation Time: 2023-11-15 14:57:58 +0000
+# Generation Time: 2023-11-15 15:05:46 +0000
 # ************************************************************
 
 
@@ -26,22 +26,22 @@ SET NAMES utf8mb4;
 DROP TABLE IF EXISTS `cb_author`;
 
 CREATE TABLE `cb_author` (
-  `authorID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `authorID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `firstName` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lastName` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `firstName` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lastName` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `isActive` tinyint(1) NOT NULL DEFAULT '1',
   `lastLogin` datetime DEFAULT NULL,
-  `biography` longtext COLLATE utf8mb4_unicode_ci,
-  `preferences` longtext COLLATE utf8mb4_unicode_ci,
+  `biography` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `preferences` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `isPasswordReset` tinyint(1) NOT NULL DEFAULT '0',
   `is2FactorAuth` tinyint(1) NOT NULL DEFAULT '0',
-  `FK_roleID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_roleID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`authorID`),
   UNIQUE KEY `username` (`username`),
   KEY `fk_cb_author_FK_roleID` (`FK_roleID`),
@@ -73,8 +73,8 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_authorPermissionGroups`;
 
 CREATE TABLE `cb_authorPermissionGroups` (
-  `FK_permissionGroupID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_authorID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_permissionGroupID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_authorID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   KEY `fk_cb_authorPermissionGroups_FK_permissionGroupID` (`FK_permissionGroupID`),
   KEY `fk_cb_authorPermissionGroups_FK_authorID` (`FK_authorID`),
   CONSTRAINT `fk_cb_authorPermissionGroups_FK_authorID` FOREIGN KEY (`FK_authorID`) REFERENCES `cb_author` (`authorID`),
@@ -89,8 +89,8 @@ CREATE TABLE `cb_authorPermissionGroups` (
 DROP TABLE IF EXISTS `cb_authorPermissions`;
 
 CREATE TABLE `cb_authorPermissions` (
-  `FK_permissionID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_authorID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_permissionID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_authorID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   KEY `fk_cb_authorPermissions_FK_permissionID` (`FK_permissionID`),
   KEY `fk_cb_authorPermissions_FK_authorID` (`FK_authorID`),
   CONSTRAINT `fk_cb_authorPermissions_FK_authorID` FOREIGN KEY (`FK_authorID`) REFERENCES `cb_author` (`authorID`),
@@ -105,14 +105,14 @@ CREATE TABLE `cb_authorPermissions` (
 DROP TABLE IF EXISTS `cb_category`;
 
 CREATE TABLE `cb_category` (
-  `categoryID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `categoryID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `isPublic` tinyint(1) NOT NULL DEFAULT '1',
-  `FK_siteID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_siteID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`categoryID`),
   KEY `fk_cb_category_FK_siteID` (`FK_siteID`),
   KEY `idx_isPublic` (`isPublic`),
@@ -146,17 +146,17 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_comment`;
 
 CREATE TABLE `cb_comment` (
-  `commentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `commentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `author` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `authorIP` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `authorEmail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `authorURL` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `author` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `authorIP` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `authorEmail` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `authorURL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `isApproved` tinyint(1) NOT NULL DEFAULT '0',
-  `FK_contentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`commentID`),
   KEY `fk_cb_comment_FK_contentID` (`FK_contentID`),
   KEY `idx_contentComment` (`isApproved`,`FK_contentID`),
@@ -183,8 +183,8 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_commentSubscriptions`;
 
 CREATE TABLE `cb_commentSubscriptions` (
-  `subscriptionID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_contentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subscriptionID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   KEY `fk_cb_commentSubscriptions_subscriptionID` (`subscriptionID`),
   KEY `fk_cb_commentSubscriptions_FK_contentID` (`FK_contentID`),
   CONSTRAINT `fk_cb_commentSubscriptions_FK_contentID` FOREIGN KEY (`FK_contentID`) REFERENCES `cb_content` (`contentID`),
@@ -199,32 +199,32 @@ CREATE TABLE `cb_commentSubscriptions` (
 DROP TABLE IF EXISTS `cb_content`;
 
 CREATE TABLE `cb_content` (
-  `contentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `contentType` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contentType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `publishedDate` datetime DEFAULT NULL,
   `expireDate` datetime DEFAULT NULL,
   `isPublished` tinyint(1) NOT NULL DEFAULT '1',
   `allowComments` tinyint(1) NOT NULL DEFAULT '1',
-  `passwordProtection` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `HTMLKeywords` varchar(160) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `HTMLDescription` varchar(160) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `HTMLTitle` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `passwordProtection` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `HTMLKeywords` varchar(160) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `HTMLDescription` varchar(160) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `HTMLTitle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `cache` tinyint(1) NOT NULL DEFAULT '1',
   `cacheTimeout` int NOT NULL DEFAULT '0',
   `cacheLastAccessTimeout` int NOT NULL DEFAULT '0',
-  `markup` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'HTML',
+  `markup` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'HTML',
   `showInSearch` tinyint(1) NOT NULL DEFAULT '1',
-  `featuredImage` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_siteID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_authorID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_parentID` varchar(36) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `FK_contentTemplateID` varchar(36) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `FK_childContentTemplateID` varchar(36) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `featuredImage` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_siteID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_authorID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_parentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `FK_contentTemplateID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `FK_childContentTemplateID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`contentID`),
   KEY `fk_cb_content_FK_siteID` (`FK_siteID`),
   KEY `fk_cb_content_FK_authorID` (`FK_authorID`),
@@ -317,8 +317,8 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_contentCategories`;
 
 CREATE TABLE `cb_contentCategories` (
-  `FK_contentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_categoryID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_categoryID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   KEY `fk_cb_contentCategories_FK_contentID` (`FK_contentID`),
   KEY `fk_cb_contentCategories_FK_categoryID` (`FK_categoryID`),
   CONSTRAINT `fk_cb_contentCategories_FK_categoryID` FOREIGN KEY (`FK_categoryID`) REFERENCES `cb_category` (`categoryID`),
@@ -342,9 +342,9 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_contentStore`;
 
 CREATE TABLE `cb_contentStore` (
-  `contentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `order` int DEFAULT '0',
-  `description` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`contentID`),
   CONSTRAINT `fk_cb_contentStore_contentID` FOREIGN KEY (`contentID`) REFERENCES `cb_content` (`contentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -413,17 +413,17 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_contentTemplate`;
 
 CREATE TABLE `cb_contentTemplate` (
-  `templateID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `templateID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
   `isGlobal` tinyint(1) NOT NULL DEFAULT '0',
-  `contentType` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `definition` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_authorID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_siteID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contentType` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `definition` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_authorID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_siteID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`templateID`),
   KEY `fk_cb_contentTemplate_FK_authorID` (`FK_authorID`),
   KEY `fk_cb_contentTemplate_FK_siteID` (`FK_siteID`),
@@ -440,16 +440,16 @@ CREATE TABLE `cb_contentTemplate` (
 DROP TABLE IF EXISTS `cb_contentVersion`;
 
 CREATE TABLE `cb_contentVersion` (
-  `contentVersionID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contentVersionID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `changelog` longtext COLLATE utf8mb4_unicode_ci,
+  `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `changelog` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `version` int NOT NULL DEFAULT '1',
   `isActive` tinyint(1) NOT NULL DEFAULT '1',
-  `FK_authorID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_contentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_authorID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`contentVersionID`),
   KEY `fk_cb_contentVersion_FK_authorID` (`FK_authorID`),
   KEY `idx_version` (`version`),
@@ -732,13 +732,13 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_customfield`;
 
 CREATE TABLE `cb_customfield` (
-  `customFieldID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `customFieldID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_contentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`customFieldID`),
   KEY `fk_cb_customfield_FK_contentID` (`FK_contentID`),
   CONSTRAINT `fk_cb_customfield_FK_contentID` FOREIGN KEY (`FK_contentID`) REFERENCES `cb_content` (`contentID`)
@@ -802,8 +802,8 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_entry`;
 
 CREATE TABLE `cb_entry` (
-  `contentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `excerpt` longtext COLLATE utf8mb4_unicode_ci,
+  `contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `excerpt` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`contentID`),
   CONSTRAINT `fk_cb_entry_contentID` FOREIGN KEY (`contentID`) REFERENCES `cb_content` (`contentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -827,8 +827,8 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_groupPermissions`;
 
 CREATE TABLE `cb_groupPermissions` (
-  `FK_permissionGroupID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_permissionID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_permissionGroupID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_permissionID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   KEY `fk_cb_groupPermissions_FK_permissionGroupID` (`FK_permissionGroupID`),
   KEY `fk_cb_groupPermissions_FK_permissionID` (`FK_permissionID`),
   CONSTRAINT `fk_cb_groupPermissions_FK_permissionGroupID` FOREIGN KEY (`FK_permissionGroupID`) REFERENCES `cb_permissionGroup` (`permissionGroupID`),
@@ -843,12 +843,12 @@ CREATE TABLE `cb_groupPermissions` (
 DROP TABLE IF EXISTS `cb_jwt`;
 
 CREATE TABLE `cb_jwt` (
-  `id` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` datetime NOT NULL,
   `issued` datetime NOT NULL,
-  `token` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cacheKey` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `subject` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cacheKey` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subject` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_cacheKey` (`cacheKey`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1510,13 +1510,13 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_loginAttempts`;
 
 CREATE TABLE `cb_loginAttempts` (
-  `loginAttemptsID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `loginAttemptsID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `value` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `attempts` bigint NOT NULL,
-  `lastLoginSuccessIP` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lastLoginSuccessIP` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`loginAttemptsID`),
   KEY `idx_values` (`value`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1526,8 +1526,8 @@ LOCK TABLES `cb_loginAttempts` WRITE;
 
 INSERT INTO `cb_loginAttempts` (`loginAttemptsID`, `createdDate`, `modifiedDate`, `isDeleted`, `value`, `attempts`, `lastLoginSuccessIP`)
 VALUES
-	('2c9480838bca8a35018bca95cfc00001','2023-11-13 21:28:18','2023-11-13 21:28:17',0,'',0,'192.168.65.1'),
-	('2c9480838bca8a35018bcaae7850001f','2023-11-13 21:55:14','2023-11-13 21:55:13',0,'',0,'192.168.65.1');
+	('2c9380838bd37fc3018bd383693f0002','2023-11-15 15:04:47','2023-11-15 15:04:46',0,'',1,NULL),
+	('2c9380838bd37fc3018bd383694f0003','2023-11-15 15:04:47','2023-11-15 15:04:46',0,'',1,NULL);
 
 /*!40000 ALTER TABLE `cb_loginAttempts` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1539,16 +1539,16 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_menu`;
 
 CREATE TABLE `cb_menu` (
-  `menuID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `menuID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `title` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `menuClass` varchar(160) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `listClass` varchar(160) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `listType` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `FK_siteID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `menuClass` varchar(160) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `listClass` varchar(160) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `listType` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `FK_siteID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`menuID`),
   KEY `fk_cb_menu_FK_siteID` (`FK_siteID`),
   KEY `idx_menutitle` (`title`),
@@ -1564,24 +1564,24 @@ CREATE TABLE `cb_menu` (
 DROP TABLE IF EXISTS `cb_menuItem`;
 
 CREATE TABLE `cb_menuItem` (
-  `menuItemID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `menuItemID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
   `active` tinyint(1) NOT NULL DEFAULT '0',
-  `title` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `label` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `itemClass` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `data` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `menuType` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `menuSlug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `contentSlug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `js` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `target` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `urlClass` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `FK_menuID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_parentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `label` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `itemClass` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `data` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `menuType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `menuSlug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contentSlug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `js` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `target` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `urlClass` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `FK_menuID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_parentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`menuItemID`),
   KEY `fk_cb_menuItem_FK_menuID` (`FK_menuID`),
   KEY `fk_cb_menuItem_FK_parentID` (`FK_parentID`),
@@ -1599,20 +1599,20 @@ CREATE TABLE `cb_menuItem` (
 DROP TABLE IF EXISTS `cb_module`;
 
 CREATE TABLE `cb_module` (
-  `moduleID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `moduleID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `version` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `entryPoint` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `author` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `webURL` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `forgeBoxSlug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `version` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `entryPoint` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `author` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `webURL` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `forgeBoxSlug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `isActive` tinyint(1) NOT NULL DEFAULT '0',
-  `moduleType` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `moduleType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`moduleID`),
   KEY `idx_moduleName` (`name`),
   KEY `idx_entryPoint` (`entryPoint`),
@@ -1638,11 +1638,11 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_page`;
 
 CREATE TABLE `cb_page` (
-  `contentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `showInMenu` tinyint(1) NOT NULL DEFAULT '1',
   `order` int DEFAULT '0',
-  `excerpt` longtext COLLATE utf8mb4_unicode_ci,
-  `layout` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `excerpt` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `layout` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`contentID`),
   CONSTRAINT `fk_cb_page_contentID` FOREIGN KEY (`contentID`) REFERENCES `cb_content` (`contentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1668,12 +1668,12 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_permission`;
 
 CREATE TABLE `cb_permission` (
-  `permissionID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `permissionID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `permission` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `permission` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`permissionID`),
   UNIQUE KEY `permission` (`permission`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1738,12 +1738,12 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_permissionGroup`;
 
 CREATE TABLE `cb_permissionGroup` (
-  `permissionGroupID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `permissionGroupID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`permissionGroupID`),
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1756,8 +1756,8 @@ CREATE TABLE `cb_permissionGroup` (
 DROP TABLE IF EXISTS `cb_relatedContent`;
 
 CREATE TABLE `cb_relatedContent` (
-  `FK_contentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_relatedContentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_relatedContentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   KEY `fk_cb_relatedContent_FK_contentID` (`FK_contentID`),
   KEY `fk_cb_relatedContent_FK_relatedContentID` (`FK_relatedContentID`),
   CONSTRAINT `fk_cb_relatedContent_FK_contentID` FOREIGN KEY (`FK_contentID`) REFERENCES `cb_content` (`contentID`),
@@ -1772,14 +1772,14 @@ CREATE TABLE `cb_relatedContent` (
 DROP TABLE IF EXISTS `cb_relocations`;
 
 CREATE TABLE `cb_relocations` (
-  `relocationID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `relocationID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `slug` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `target` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `FK_siteID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_contentID` varchar(36) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `target` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `FK_siteID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`relocationID`),
   UNIQUE KEY `unq_cb_relocations_slug_FK_siteID` (`slug`,`FK_siteID`),
   KEY `fk_cb_relocations_FK_siteID` (`FK_siteID`),
@@ -1796,12 +1796,12 @@ CREATE TABLE `cb_relocations` (
 DROP TABLE IF EXISTS `cb_role`;
 
 CREATE TABLE `cb_role` (
-  `roleID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `roleID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `role` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`roleID`),
   UNIQUE KEY `role` (`role`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1825,8 +1825,8 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_rolePermissions`;
 
 CREATE TABLE `cb_rolePermissions` (
-  `FK_permissionID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_roleID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_permissionID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_roleID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   KEY `fk_cb_rolePermissions_FK_permissionID` (`FK_permissionID`),
   KEY `fk_cb_rolePermissions_FK_roleID` (`FK_roleID`),
   CONSTRAINT `fk_cb_rolePermissions_FK_permissionID` FOREIGN KEY (`FK_permissionID`) REFERENCES `cb_permission` (`permissionID`),
@@ -1921,25 +1921,25 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_securityRule`;
 
 CREATE TABLE `cb_securityRule` (
-  `ruleID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ruleID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `whitelist` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `securelist` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `match` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `roles` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `permissions` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `redirect` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `overrideEvent` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `whitelist` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `securelist` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `match` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `roles` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `permissions` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `redirect` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `overrideEvent` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `useSSL` tinyint(1) NOT NULL DEFAULT '0',
-  `action` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'redirect',
-  `module` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `httpMethods` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '*',
-  `allowedIPs` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '*',
+  `action` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'redirect',
+  `module` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `httpMethods` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '*',
+  `allowedIPs` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '*',
   `order` int NOT NULL DEFAULT '0',
-  `message` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `messageType` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'info',
+  `message` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `messageType` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'info',
   PRIMARY KEY (`ruleID`),
   KEY `idx_deleted` (`isDeleted`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1984,14 +1984,14 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_setting`;
 
 CREATE TABLE `cb_setting` (
-  `settingID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `settingID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `isCore` tinyint(1) NOT NULL DEFAULT '0',
-  `FK_siteID` varchar(36) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `FK_siteID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`settingID`),
   KEY `fk_cb_setting_FK_siteID` (`FK_siteID`),
   KEY `idx_core` (`isCore`),
@@ -2221,31 +2221,31 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_site`;
 
 CREATE TABLE `cb_site` (
-  `siteID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `siteID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` longtext COLLATE utf8mb4_unicode_ci,
-  `domainRegex` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `keywords` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `tagline` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `homepage` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `domainRegex` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `keywords` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tagline` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `homepage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `isBlogEnabled` tinyint(1) NOT NULL DEFAULT '1',
   `isSitemapEnabled` tinyint(1) NOT NULL DEFAULT '1',
   `poweredByHeader` tinyint(1) NOT NULL DEFAULT '1',
   `adminBar` tinyint(1) NOT NULL DEFAULT '1',
   `isSSL` tinyint(1) NOT NULL DEFAULT '0',
-  `activeTheme` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `notificationEmails` longtext COLLATE utf8mb4_unicode_ci,
+  `activeTheme` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `notificationEmails` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `notifyOnEntries` tinyint(1) NOT NULL DEFAULT '1',
   `notifyOnPages` tinyint(1) NOT NULL DEFAULT '1',
   `notifyOnContentStore` tinyint(1) NOT NULL DEFAULT '1',
-  `domain` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `domain` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `isActive` tinyint(1) NOT NULL DEFAULT '1',
-  `mediaDisk` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `domainAliases` text COLLATE utf8mb4_unicode_ci,
+  `mediaDisk` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `domainAliases` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`siteID`),
   UNIQUE KEY `slug` (`slug`),
   KEY `idx_siteSlug` (`slug`),
@@ -2270,12 +2270,12 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cb_stats`;
 
 CREATE TABLE `cb_stats` (
-  `statsID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `statsID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
   `hits` bigint NOT NULL DEFAULT '0',
-  `FK_contentID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_contentID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`statsID`),
   KEY `fk_cb_stats_FK_contentID` (`FK_contentID`),
   KEY `idx_deleted` (`isDeleted`),
@@ -2290,12 +2290,12 @@ CREATE TABLE `cb_stats` (
 DROP TABLE IF EXISTS `cb_subscribers`;
 
 CREATE TABLE `cb_subscribers` (
-  `subscriberID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subscriberID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `subscriberEmail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `subscriberToken` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subscriberEmail` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subscriberToken` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`subscriberID`),
   KEY `idx_subscriberEmail` (`subscriberEmail`),
   KEY `idx_deleted` (`isDeleted`)
@@ -2309,13 +2309,13 @@ CREATE TABLE `cb_subscribers` (
 DROP TABLE IF EXISTS `cb_subscriptions`;
 
 CREATE TABLE `cb_subscriptions` (
-  `subscriptionID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subscriptionID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifiedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isDeleted` tinyint(1) NOT NULL DEFAULT '0',
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `subscriptionToken` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `FK_subscriberID` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FK_subscriberID` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`subscriptionID`),
   KEY `fk_cb_subscriptions_FK_subscriberID` (`FK_subscriberID`),
   KEY `idx_deleted` (`isDeleted`),
@@ -2330,19 +2330,19 @@ CREATE TABLE `cb_subscriptions` (
 DROP TABLE IF EXISTS `cbsecurity_logs`;
 
 CREATE TABLE `cbsecurity_logs` (
-  `id` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `logDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `securityRule` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `action` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `blockType` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ip` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `host` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `httpMethod` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queryString` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `referer` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `userAgent` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `userId` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `securityRule` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `action` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `blockType` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ip` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `host` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `httpMethod` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queryString` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `referer` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `userAgent` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `userId` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_cbsecurity` (`logDate`,`action`,`blockType`),
   KEY `idx_cbsecurity_userId` (`userId`),
@@ -2389,6 +2389,7 @@ VALUES
 	('1054dce1-1177-4023-87b3-d3f33b27b43a','2023-11-13 14:55:52','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"7BF18B56-20EB-45AA-ADAD9A173D45D975\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','allow','RULE-WHITELIST','192.168.65.1','127.0.0.1:61670','POST','/cbapi/v1/login','','','Lucee (CFML Engine)',''),
 	('10d62421-2ce6-4337-a55d-7fac756fbf7f','2023-11-13 16:22:01','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"A90C0C2B-A363-41E1-BD556E2401C876EE\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','override','authentication','192.168.65.1','127.0.0.1:61670','OPTIONS','/cbapi/v1/sites/default/contentStore/headlesscb-slides','includes=children.renderedContent,children.customFields','http://127.0.0.1:49917/','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',''),
 	('10dbf78f-7bc3-44c0-a14b-7982249ca88b','2023-11-15 12:54:24','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"\",\"whiteList\":\"\",\"overrideEvent\":\"\",\"secureList\":\"\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"9523C9D2-8F8A-47BF-A7A912DDC9B10ECB\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','override','authentication','192.168.65.1','127.0.0.1:61670','OPTIONS','/cbapi/v1/whoami','','http://localhost:9090/','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',''),
+	('10e58704-77c6-4b9b-8999-30187be68415','2023-11-15 15:01:15','{\"httpMethods\":\"*\",\"message\":\"\",\"isDeleted\":false,\"messageType\":\"info\",\"match\":\"event\",\"permissions\":\"CONTENTBOX_ADMIN\",\"ruleID\":\"2c9480838309dc9c018309dfc46700dd\",\"module\":\"contentbox\",\"order\":18,\"createdDate\":\"September, 04 2022 19:00:03 +0000\",\"whitelist\":\"^contentbox-admin:security\\\\.\",\"overrideEvent\":\"\",\"securelist\":\"^contentbox-admin:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"modifiedDate\":\"September, 04 2022 19:00:03 +0000\",\"action\":\"redirect\",\"roles\":\"\",\"redirect\":\"cbadmin/security/login\"}','redirect','authentication','192.168.65.1','127.0.0.1:61670','GET','/cbadmin/','','','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',''),
 	('115e2022-ca03-4983-9d83-f8f5db32a924','2023-11-15 13:17:56','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"CDD65A97-E7D5-4466-95AE27195DA24825\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','override','authentication','192.168.65.1','127.0.0.1:61670','OPTIONS','/cbapi/v1/sites/default/pages/services','','http://localhost:9090/','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',''),
 	('1189ef47-7ea0-40bb-a623-226c599d5d27','2023-11-13 12:17:47','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"7BF18B56-20EB-45AA-ADAD9A173D45D975\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','allow','RULE-WHITELIST','192.168.65.1','127.0.0.1:61670','POST','/cbapi/v1/login','','','Lucee (CFML Engine)',''),
 	('1228939c-5a60-40cc-971d-1d6d9aa1a81e','2023-11-13 12:16:57','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"7BF18B56-20EB-45AA-ADAD9A173D45D975\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','allow','RULE-WHITELIST','192.168.65.1','127.0.0.1:61670','POST','/cbapi/v1/login','','','Lucee (CFML Engine)',''),
@@ -2776,11 +2777,11 @@ VALUES
 	('e0c365d5-65b2-429f-a1cc-c324b6edd460','2023-11-13 12:20:41','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"7BF18B56-20EB-45AA-ADAD9A173D45D975\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','allow','RULE-WHITELIST','192.168.65.1','127.0.0.1:61670','POST','/cbapi/v1/login','','','Lucee (CFML Engine)',''),
 	('e1182e2e-dd0b-4dd7-8a20-cefb8b362e79','2023-11-13 11:18:46','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"7BF18B56-20EB-45AA-ADAD9A173D45D975\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','allow','RULE-WHITELIST','192.168.65.1','127.0.0.1:61670','POST','/cbapi/v1/login','','','Lucee (CFML Engine)',''),
 	('e11eca53-5581-41e5-b1cc-71b995f3e0de','2023-11-13 12:12:38','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"7BF18B56-20EB-45AA-ADAD9A173D45D975\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','override','authentication','192.168.65.1','127.0.0.1:61670','OPTIONS','/cbapi/v1/sites/default/contentStore/headlesscb-slides','includes=children.renderedContent,children.customFields','http://127.0.0.1:49917/','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',''),
-	('e1883eaa-28e6-4de3-8d6e-961238b019b6','2023-11-15 13:23:25','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"CDD65A97-E7D5-4466-95AE27195DA24825\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','override','authentication','192.168.65.1','127.0.0.1:61670','OPTIONS','/cbapi/v1/sites/default/pages/services','','http://localhost:9090/','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',''),
-	('e2fda030-35e8-4708-851a-e12546016ed1','2023-11-13 16:34:24','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"A90C0C2B-A363-41E1-BD556E2401C876EE\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','override','authentication','192.168.65.1','127.0.0.1:61670','OPTIONS','/cbapi/v1/sites/default/contentStore/headlesscb-slides','includes=children.renderedContent,children.customFields','http://127.0.0.1:49917/','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36','');
+	('e1883eaa-28e6-4de3-8d6e-961238b019b6','2023-11-15 13:23:25','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"CDD65A97-E7D5-4466-95AE27195DA24825\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','override','authentication','192.168.65.1','127.0.0.1:61670','OPTIONS','/cbapi/v1/sites/default/pages/services','','http://localhost:9090/','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36','');
 
 INSERT INTO `cbsecurity_logs` (`id`, `logDate`, `securityRule`, `action`, `blockType`, `ip`, `host`, `httpMethod`, `path`, `queryString`, `referer`, `userAgent`, `userId`)
 VALUES
+	('e2fda030-35e8-4708-851a-e12546016ed1','2023-11-13 16:34:24','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"A90C0C2B-A363-41E1-BD556E2401C876EE\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','override','authentication','192.168.65.1','127.0.0.1:61670','OPTIONS','/cbapi/v1/sites/default/contentStore/headlesscb-slides','includes=children.renderedContent,children.customFields','http://127.0.0.1:49917/','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',''),
 	('e3dcefa3-c34d-4ec8-89a7-df4166c36906','2023-11-13 12:12:41','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"7BF18B56-20EB-45AA-ADAD9A173D45D975\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','allow','RULE-WHITELIST','192.168.65.1','127.0.0.1:61670','POST','/cbapi/v1/login','','','Lucee (CFML Engine)',''),
 	('e42fa273-0803-4ce6-aa0a-4d2d3279642b','2023-11-15 13:23:21','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"CDD65A97-E7D5-4466-95AE27195DA24825\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','override','authentication','192.168.65.1','127.0.0.1:61670','OPTIONS','/cbapi/v1/sites/default/pages/services','','http://localhost:9090/','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',''),
 	('e5b4d894-7068-4170-864d-7dd74b31becf','2023-11-15 12:55:03','{\"httpMethods\":\"*\",\"match\":\"event\",\"permissions\":\"\",\"module\":\"contentbox-api-v1\",\"whiteList\":\"(auth|echo)\",\"overrideEvent\":\"\",\"secureList\":\"contentbox\\\\-api\\\\-v1\\\\:.*\",\"allowedIPs\":\"*\",\"useSSL\":false,\"id\":\"CDD65A97-E7D5-4466-95AE27195DA24825\",\"action\":\"\",\"roles\":\"\",\"redirect\":\"\"}','override','authentication','192.168.65.1','127.0.0.1:61670','OPTIONS','/cbapi/v1/sites/default/pages/home','','http://localhost:9090/','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',''),
@@ -2847,7 +2848,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `cfmigrations`;
 
 CREATE TABLE `cfmigrations` (
-  `name` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `migration_ran` datetime NOT NULL,
   PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
