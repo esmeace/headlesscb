@@ -1,15 +1,17 @@
 {
-    "name":"Headlesscb",
+	"name":"ContentBox-HeadlessCMS",
+    "JVM":{
+        "heapSize":"768",
+        "args":"-Dfile.encoding=UTF8 -Dcom.sun.net.ssl.enableECC=false -Dlucee-extensions=D062D72F-F8A2-46F0-8CBC91325B2F067B"
+    },
     "web":{
         "directoryBrowsing":false,
         "rewrites":{
             "enable":true
         }
     },
-    "JVM":{
-        "heapSize":"768"
-    },
-    "openBrowserURL":"/",
+	"openBrowserURL":"/",
+	"openBrowser": false,
     "trayicon":"modules_app/contentbox-custom/_content/ContentBoxIcon300.png",
     "trayOptions":[
         {
@@ -20,11 +22,7 @@
             "image":"modules_app/contentbox-custom/_content/ContentBoxIcon300.png"
         }
     ],
-    "fusionreactor":{
-        "enable":"false"
-    },
-    "app":{
-        "cfengine":"lucee@5"
-    },
-    "openBrowser":"false"
+    "cfconfig":{
+        "file":".cfconfig.json"
+    }
 }
